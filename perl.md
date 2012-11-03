@@ -1,3 +1,8 @@
+---
+layout: default
+title: Perl DaZeus documentation
+---
+
 # NAME
 
 DaZeus - Perl interface to the DaZeus 2 Socket API
