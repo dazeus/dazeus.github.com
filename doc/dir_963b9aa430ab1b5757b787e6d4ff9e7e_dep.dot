@@ -1,0 +1,15 @@
+digraph G {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f5d0918862111507f60aa64617660d64 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="contrib" fontname="Helvetica", fontsize="10", URL="dir_f5d0918862111507f60aa64617660d64.html"]
+  subgraph clusterdir_963b9aa430ab1b5757b787e6d4ff9e7e {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_963b9aa430ab1b5757b787e6d4ff9e7e.html"];
+    dir_963b9aa430ab1b5757b787e6d4ff9e7e [shape=plaintext label="libdazeus-irc"];
+    dir_0b6e360c4b805ba639b72ddafed65e8a [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_0b6e360c4b805ba639b72ddafed65e8a.html"];
+    dir_f1763e05f5a243da9cfa9c28b6d27661 [shape=box label="tests" color="black" fillcolor="white" style="filled" URL="dir_f1763e05f5a243da9cfa9c28b6d27661.html"];
+  }
+  }
+  dir_f1763e05f5a243da9cfa9c28b6d27661->dir_0b6e360c4b805ba639b72ddafed65e8a [headlabel="7", labeldistance=1.5 headhref="dir_000008_000006.html"];
+}

@@ -1,0 +1,15 @@
+digraph G {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e9a1afb47a08e9bb64dad51bae0f2774 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="bindings" fontname="Helvetica", fontsize="10", URL="dir_e9a1afb47a08e9bb64dad51bae0f2774.html"]
+  subgraph clusterdir_40ca6315ddbcc6fcadb491a538df6a0b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_40ca6315ddbcc6fcadb491a538df6a0b.html"];
+    dir_40ca6315ddbcc6fcadb491a538df6a0b [shape=plaintext label="libdazeus"];
+    dir_b0ce9f1ef90a533d160b814cc7d0f4ad [shape=box label="include" color="black" fillcolor="white" style="filled" URL="dir_b0ce9f1ef90a533d160b814cc7d0f4ad.html"];
+    dir_fa9a7bb3024747ad52102b03f7a35cff [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_fa9a7bb3024747ad52102b03f7a35cff.html"];
+  }
+  }
+  dir_fa9a7bb3024747ad52102b03f7a35cff->dir_b0ce9f1ef90a533d160b814cc7d0f4ad [headlabel="1", labeldistance=1.5 headhref="dir_000003_000002.html"];
+}

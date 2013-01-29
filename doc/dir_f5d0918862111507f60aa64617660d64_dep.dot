@@ -1,0 +1,10 @@
+digraph G {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f5d0918862111507f60aa64617660d64 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f5d0918862111507f60aa64617660d64.html"];
+    dir_f5d0918862111507f60aa64617660d64 [shape=plaintext label="contrib"];
+    dir_963b9aa430ab1b5757b787e6d4ff9e7e [shape=box label="libdazeus-irc" color="red" fillcolor="white" style="filled" URL="dir_963b9aa430ab1b5757b787e6d4ff9e7e.html"];
+  }
+}
