@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -130,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00075"></a>00075 
 <a name="l00077"></a>00077 
 <a name="l00078"></a><a class="code" href="class_da_zeus.html#a345051d70e4cc682f443557c9473debb">00078</a> <a class="code" href="class_da_zeus.html#a345051d70e4cc682f443557c9473debb">DaZeus::DaZeus</a>() : d_(<a class="code" href="libdazeus_8c.html#a634fc2a6a86a80dad3ca86d93f13cb62">libdazeus_create</a>()), n_(0) {}
-<a name="l00079"></a>00079 <a class="code" href="class_da_zeus.html#a8c894df795bc95cf5c0a2b3b7b6f7e36" title="Destructor.">DaZeus::~DaZeus</a>() {
+<a name="l00079"></a><a class="code" href="class_da_zeus.html#a8c894df795bc95cf5c0a2b3b7b6f7e36">00079</a> <a class="code" href="class_da_zeus.html#a8c894df795bc95cf5c0a2b3b7b6f7e36">DaZeus::~DaZeus</a>() {
 <a name="l00080"></a>00080         <a class="code" href="libdazeus_8c.html#ac301c5ac2a6de5bedaf3ec27eaabe156">libdazeus_close</a>(d_);
 <a name="l00081"></a>00081         <span class="keyword">delete</span> n_;
 <a name="l00082"></a>00082 }
@@ -147,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094         <span class="keyword">delete</span> n_;
 <a name="l00095"></a>00095         n_ = <span class="keyword">new</span> QSocketNotifier(fd, QSocketNotifier::Read);
-<a name="l00096"></a>00096         connect(n_,   SIGNAL(activated(<span class="keywordtype">int</span>)),
+<a name="l00096"></a>00096         <a class="code" href="class_da_zeus.html#afc564d20aa642f833aa0970b2c70b816">connect</a>(n_,   SIGNAL(activated(<span class="keywordtype">int</span>)),
 <a name="l00097"></a>00097                 <span class="keyword">this</span>,   SLOT(activated()));
 <a name="l00098"></a>00098         <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00099"></a>00099 }
@@ -156,9 +157,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00102"></a>00102         <span class="keywordflow">return</span> <a class="code" href="libdazeus_8c.html#ab38ab7601dd97b27152264efc9e744ce">libdazeus_get_socket</a>(d_) != 0;
 <a name="l00103"></a>00103 }
 <a name="l00104"></a>00104 
-<a name="l00105"></a><a class="code" href="class_da_zeus.html#a2ce14d50026a58fcc7b180f9f4632ac5">00105</a> QStringList <a class="code" href="class_da_zeus.html#a6e0bdf85f945686a0fe0583f1fac4f8a">DaZeus::networks</a>() {
-<a name="l00106"></a>00106         <a class="code" href="structdazeus__stringlist__struct.html">dazeus_stringlist</a> *<a class="code" href="class_da_zeus.html#a6e0bdf85f945686a0fe0583f1fac4f8a">networks</a> = <a class="code" href="libdazeus_8c.html#ad4ec7a7baac5942f607958314129540a">libdazeus_networks</a>(d_);
-<a name="l00107"></a>00107         <a class="code" href="structdazeus__stringlist__struct.html">dazeus_stringlist</a> *neti = <a class="code" href="class_da_zeus.html#a6e0bdf85f945686a0fe0583f1fac4f8a">networks</a>;
+<a name="l00105"></a><a class="code" href="class_da_zeus.html#a2ce14d50026a58fcc7b180f9f4632ac5">00105</a> QStringList <a class="code" href="class_da_zeus.html#a2ce14d50026a58fcc7b180f9f4632ac5">DaZeus::networks</a>() {
+<a name="l00106"></a>00106         <a class="code" href="structdazeus__stringlist__struct.html">dazeus_stringlist</a> *<a class="code" href="class_da_zeus.html#a2ce14d50026a58fcc7b180f9f4632ac5">networks</a> = <a class="code" href="libdazeus_8c.html#ad4ec7a7baac5942f607958314129540a">libdazeus_networks</a>(d_);
+<a name="l00107"></a>00107         <a class="code" href="structdazeus__stringlist__struct.html">dazeus_stringlist</a> *neti = <a class="code" href="class_da_zeus.html#a2ce14d50026a58fcc7b180f9f4632ac5">networks</a>;
 <a name="l00108"></a>00108         QStringList results;
 <a name="l00109"></a>00109         <span class="keywordflow">while</span>(neti != 0) {
 <a name="l00110"></a>00110                 results &lt;&lt; QString::fromUtf8(neti-&gt;<a class="code" href="structdazeus__stringlist__struct.html#aeeaa1afa6c7ec7d90ffd24621b2c1c45">value</a>);
@@ -255,7 +256,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp.html">dazeus.cpp</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -265,7 +266,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

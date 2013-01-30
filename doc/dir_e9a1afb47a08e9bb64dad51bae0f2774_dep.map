@@ -1,6 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="dir_40ca6315ddbcc6fcadb491a538df6a0b.html" title="libdazeus" alt="" coords="35,123,112,171"/>
-<area shape="rect" id="node4" href="dir_44e0bb0438513cd58e11698c7c4718fa.html" title="libdazeus&#45;qt" alt="" coords="27,27,120,75"/>
-<area shape="rect" id="edge3" href="dir_000008_000001.html" title="1" alt="" coords="78,96,85,112"/>
-<area shape="rect" id="graph2" href="dir_e9a1afb47a08e9bb64dad51bae0f2774.html" alt="" coords="16,16,227,181"/>
+<area shape="rect" id="node3" href="dir_40ca6315ddbcc6fcadb491a538df6a0b.html" title="libdazeus" alt="" coords="131,123,208,171"/>
+<area shape="rect" id="node4" href="dir_44e0bb0438513cd58e11698c7c4718fa.html" title="libdazeus&#45;qt" alt="" coords="123,27,216,75"/>
+<area shape="rect" id="edge3" href="dir_000010_000001.html" title="1" alt="" coords="174,96,181,112"/>
+<area shape="rect" id="node5" href="dir_1023390d5b12660421f5228156c83705.html" title="perl" alt="" coords="27,27,99,75"/>
+<area shape="rect" id="graph2" href="dir_e9a1afb47a08e9bb64dad51bae0f2774.html" alt="" coords="16,16,323,181"/>
 </map>

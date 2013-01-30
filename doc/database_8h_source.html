@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -90,75 +91,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00010"></a>00010 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &lt;stdint.h&gt;</span>
 <a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="struct_database_config.html">00013</a> <span class="keyword">struct </span><a class="code" href="struct_database_config.html">DatabaseConfig</a> {
-<a name="l00014"></a><a class="code" href="struct_database_config.html#a6d0a3b53086f34b9e0cdc9ad32ebe5fa">00014</a>   <a class="code" href="struct_database_config.html#a6d0a3b53086f34b9e0cdc9ad32ebe5fa">DatabaseConfig</a>(std::string t = std::string(), std::string h = std::string(<span class="stringliteral">&quot;127.0.0.1&quot;</span>),
-<a name="l00015"></a>00015     uint16_t p = 27017, std::string user = std::string(), std::string pass =
-<a name="l00016"></a>00016     std::string(), std::string db = std::string(<span class="stringliteral">&quot;dazeus&quot;</span>), std::string opt =
-<a name="l00017"></a>00017     std::string()) : <a class="code" href="struct_database_config.html#ae8113ea23490aa6532cf013af4890e2a">type</a>(t), <a class="code" href="struct_database_config.html#ad4a8ea33a9b49b5692a175466887584b">hostname</a>(h), <a class="code" href="struct_database_config.html#a0e098b90e569bcd7920a22696e9d1fda">port</a>(p), <a class="code" href="struct_database_config.html#adefbb4c4d1e1754918dcad998d9e9164">username</a>(user),
-<a name="l00018"></a>00018     <a class="code" href="struct_database_config.html#aa17e906c33a2f1c2d1508afa50957b35">password</a>(pass), <a class="code" href="struct_database_config.html#a6d8841402f11c6f9406871b3b93f9363">database</a>(db), <a class="code" href="struct_database_config.html#a9f23f798b68c7b9846aa413396554386">options</a>(opt) {}
-<a name="l00019"></a><a class="code" href="struct_database_config.html#a3e3c2470857ab68751fe799cd83ab7d5">00019</a>   <a class="code" href="struct_database_config.html#a6d0a3b53086f34b9e0cdc9ad32ebe5fa">DatabaseConfig</a>(<span class="keyword">const</span> <a class="code" href="struct_database_config.html">DatabaseConfig</a> &amp;s) : <a class="code" href="struct_database_config.html#ae8113ea23490aa6532cf013af4890e2a">type</a>(s.<a class="code" href="struct_database_config.html#ae8113ea23490aa6532cf013af4890e2a">type</a>),
-<a name="l00020"></a>00020     <a class="code" href="struct_database_config.html#ad4a8ea33a9b49b5692a175466887584b">hostname</a>(s.<a class="code" href="struct_database_config.html#ad4a8ea33a9b49b5692a175466887584b">hostname</a>), <a class="code" href="struct_database_config.html#a0e098b90e569bcd7920a22696e9d1fda">port</a>(s.<a class="code" href="struct_database_config.html#a0e098b90e569bcd7920a22696e9d1fda">port</a>), <a class="code" href="struct_database_config.html#adefbb4c4d1e1754918dcad998d9e9164">username</a>(s.<a class="code" href="struct_database_config.html#adefbb4c4d1e1754918dcad998d9e9164">username</a>),
-<a name="l00021"></a>00021     <a class="code" href="struct_database_config.html#aa17e906c33a2f1c2d1508afa50957b35">password</a>(s.<a class="code" href="struct_database_config.html#aa17e906c33a2f1c2d1508afa50957b35">password</a>), <a class="code" href="struct_database_config.html#a6d8841402f11c6f9406871b3b93f9363">database</a>(s.<a class="code" href="struct_database_config.html#a6d8841402f11c6f9406871b3b93f9363">database</a>), <a class="code" href="struct_database_config.html#a9f23f798b68c7b9846aa413396554386">options</a>(s.<a class="code" href="struct_database_config.html#a9f23f798b68c7b9846aa413396554386">options</a>) {}
-<a name="l00022"></a><a class="code" href="struct_database_config.html#a6c4b3e59243add0a8ceaca37caa02c5f">00022</a>   <span class="keyword">const</span> <a class="code" href="struct_database_config.html">DatabaseConfig</a> &amp;<a class="code" href="struct_database_config.html#a6c4b3e59243add0a8ceaca37caa02c5f">operator=</a>(<span class="keyword">const</span> <a class="code" href="struct_database_config.html">DatabaseConfig</a> &amp;s) { <a class="code" href="struct_database_config.html#ae8113ea23490aa6532cf013af4890e2a">type</a> = s.<a class="code" href="struct_database_config.html#ae8113ea23490aa6532cf013af4890e2a">type</a>;
-<a name="l00023"></a>00023     <a class="code" href="struct_database_config.html#ad4a8ea33a9b49b5692a175466887584b">hostname</a> = s.<a class="code" href="struct_database_config.html#ad4a8ea33a9b49b5692a175466887584b">hostname</a>; <a class="code" href="struct_database_config.html#a0e098b90e569bcd7920a22696e9d1fda">port</a> = s.<a class="code" href="struct_database_config.html#a0e098b90e569bcd7920a22696e9d1fda">port</a>; <a class="code" href="struct_database_config.html#adefbb4c4d1e1754918dcad998d9e9164">username</a> = s.<a class="code" href="struct_database_config.html#adefbb4c4d1e1754918dcad998d9e9164">username</a>; <a class="code" href="struct_database_config.html#aa17e906c33a2f1c2d1508afa50957b35">password</a> =
-<a name="l00024"></a>00024     s.<a class="code" href="struct_database_config.html#aa17e906c33a2f1c2d1508afa50957b35">password</a>; <a class="code" href="struct_database_config.html#a6d8841402f11c6f9406871b3b93f9363">database</a> = s.<a class="code" href="struct_database_config.html#a6d8841402f11c6f9406871b3b93f9363">database</a>; <a class="code" href="struct_database_config.html#a9f23f798b68c7b9846aa413396554386">options</a> = s.<a class="code" href="struct_database_config.html#a9f23f798b68c7b9846aa413396554386">options</a>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
-<a name="l00025"></a>00025 
-<a name="l00026"></a><a class="code" href="struct_database_config.html#ae8113ea23490aa6532cf013af4890e2a">00026</a>   std::string <a class="code" href="struct_database_config.html#ae8113ea23490aa6532cf013af4890e2a">type</a>;
-<a name="l00027"></a><a class="code" href="struct_database_config.html#ad4a8ea33a9b49b5692a175466887584b">00027</a>   std::string <a class="code" href="struct_database_config.html#ad4a8ea33a9b49b5692a175466887584b">hostname</a>;
-<a name="l00028"></a><a class="code" href="struct_database_config.html#a0e098b90e569bcd7920a22696e9d1fda">00028</a>   uint16_t <a class="code" href="struct_database_config.html#a0e098b90e569bcd7920a22696e9d1fda">port</a>;
-<a name="l00029"></a><a class="code" href="struct_database_config.html#adefbb4c4d1e1754918dcad998d9e9164">00029</a>   std::string <a class="code" href="struct_database_config.html#adefbb4c4d1e1754918dcad998d9e9164">username</a>;
-<a name="l00030"></a><a class="code" href="struct_database_config.html#aa17e906c33a2f1c2d1508afa50957b35">00030</a>   std::string <a class="code" href="struct_database_config.html#aa17e906c33a2f1c2d1508afa50957b35">password</a>;
-<a name="l00031"></a><a class="code" href="struct_database_config.html#a6d8841402f11c6f9406871b3b93f9363">00031</a>   std::string <a class="code" href="struct_database_config.html#a6d8841402f11c6f9406871b3b93f9363">database</a>;
-<a name="l00032"></a><a class="code" href="struct_database_config.html#a9f23f798b68c7b9846aa413396554386">00032</a>   std::string <a class="code" href="struct_database_config.html#a9f23f798b68c7b9846aa413396554386">options</a>;
-<a name="l00033"></a>00033 };
-<a name="l00034"></a>00034 
-<a name="l00049"></a><a class="code" href="class_database.html">00049</a> <span class="keyword">class </span><a class="code" href="class_database.html" title="A database frontend.">Database</a>
-<a name="l00050"></a>00050 {
-<a name="l00051"></a>00051   <span class="keyword">public</span>:
-<a name="l00052"></a>00052           <a class="code" href="class_database.html#a6f5a1a5e2d69365a5116870e9463340d" title="Constructor.">Database</a>( <span class="keyword">const</span> std::string &amp;hostname, uint16_t port,
-<a name="l00053"></a>00053                     <span class="keyword">const</span> std::string &amp;database = std::string(<span class="stringliteral">&quot;dazeus&quot;</span>),
-<a name="l00054"></a>00054                     <span class="keyword">const</span> std::string &amp;username = std::string(),
-<a name="l00055"></a>00055                     <span class="keyword">const</span> std::string &amp;password = std::string() );
-<a name="l00056"></a>00056          <a class="code" href="class_database.html#a84d399a2ad58d69daab9b05330e1316d" title="Destructor.">~Database</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058     <span class="keywordtype">bool</span>            <a class="code" href="class_database.html#ae83f5078d3494a4ba20521284d7efe79">open</a>();
-<a name="l00059"></a>00059     std::string     <a class="code" href="class_database.html#a53ba992b337cfe107cd1fc4fe80aaa89" title="Returns the last error in the QSqlDatabase object.">lastError</a>() <span class="keyword">const</span>;
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061     std::string     <a class="code" href="class_database.html#a494145e06c187f3b3dea901339ea5c87" title="Retrieve property from database.">property</a>( <span class="keyword">const</span> std::string &amp;variable,
-<a name="l00062"></a>00062                               <span class="keyword">const</span> std::string &amp;networkScope  = std::string(),
-<a name="l00063"></a>00063                               <span class="keyword">const</span> std::string &amp;receiverScope = std::string(),
-<a name="l00064"></a>00064                               <span class="keyword">const</span> std::string &amp;senderScope   = std::string() );
-<a name="l00065"></a>00065     <span class="keywordtype">void</span>            <a class="code" href="class_database.html#a3e7c8696e02e91cb0dfba3917f59806f">setProperty</a>( <span class="keyword">const</span> std::string &amp;variable,
-<a name="l00066"></a>00066                                  <span class="keyword">const</span> std::string &amp;value,
-<a name="l00067"></a>00067                                  <span class="keyword">const</span> std::string &amp;networkScope  = std::string(),
-<a name="l00068"></a>00068                                  <span class="keyword">const</span> std::string &amp;receiverScope = std::string(),
-<a name="l00069"></a>00069                                  <span class="keyword">const</span> std::string &amp;senderScope   = std::string());
-<a name="l00070"></a>00070     std::vector&lt;std::string&gt; <a class="code" href="class_database.html#a54ebd7a0db6431d8771654dd128f1065" title="Retrieve all properties under a certain namespace.">propertyKeys</a>( <span class="keyword">const</span> std::string &amp;ns,
-<a name="l00071"></a>00071                                   <span class="keyword">const</span> std::string &amp;networkScope  = std::string(),
-<a name="l00072"></a>00072                                   <span class="keyword">const</span> std::string &amp;receiverScope = std::string(),
-<a name="l00073"></a>00073                                   <span class="keyword">const</span> std::string &amp;senderScope   = std::string() );
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075   <span class="keyword">private</span>:
-<a name="l00076"></a>00076     <span class="comment">// explicitly disable copy constructor</span>
-<a name="l00077"></a>00077     <a class="code" href="class_database.html#a6f5a1a5e2d69365a5116870e9463340d" title="Constructor.">Database</a>(<span class="keyword">const</span> <a class="code" href="class_database.html" title="A database frontend.">Database</a>&amp;);
-<a name="l00078"></a>00078     <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="class_database.html" title="A database frontend.">Database</a>&amp;);
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080     <span class="keywordtype">void</span> *m_;
-<a name="l00081"></a>00081     std::string lastError_;
-<a name="l00082"></a>00082     std::string hostName_;
-<a name="l00083"></a>00083     std::string databaseName_;
-<a name="l00084"></a>00084     uint16_t    port_;
-<a name="l00085"></a>00085     std::string username_;
-<a name="l00086"></a>00086     std::string password_;
-<a name="l00087"></a>00087 };
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="preprocessor">#endif</span>
+<a name="l00013"></a>00013 <span class="keyword">namespace </span><a class="code" href="structdazeus__struct.html">dazeus</a> {
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="structdazeus_1_1_database_config.html">00015</a> <span class="keyword">struct </span><a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a> {
+<a name="l00016"></a><a class="code" href="structdazeus_1_1_database_config.html#a4c797574622bf2a729f75226b044e941">00016</a>   <a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a>(std::string t = std::string(), std::string h = std::string(<span class="stringliteral">&quot;127.0.0.1&quot;</span>),
+<a name="l00017"></a>00017     uint16_t p = 27017, std::string user = std::string(), std::string pass =
+<a name="l00018"></a>00018     std::string(), std::string db = std::string(<span class="stringliteral">&quot;dazeus&quot;</span>), std::string opt =
+<a name="l00019"></a>00019     std::string()) : <a class="code" href="structdazeus_1_1_database_config.html#a8c0c7cc2c7cbd807ec49dcb3dbb493c2">type</a>(t), <a class="code" href="structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04">hostname</a>(h), <a class="code" href="structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d">port</a>(p), <a class="code" href="structdazeus_1_1_database_config.html#ac41dd98efba2c6ab59a1ada191666830">username</a>(user),
+<a name="l00020"></a>00020     <a class="code" href="structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d">password</a>(pass), <a class="code" href="structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7">database</a>(db), <a class="code" href="config_8cpp.html#a7b31c656c8554c054ae2cd3559ea752f">options</a>(opt) {}
+<a name="l00021"></a><a class="code" href="structdazeus_1_1_database_config.html#a1e608fcca986f4fbe8f6c369dbc406ac">00021</a>   <a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a>(<span class="keyword">const</span> <a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a> &amp;s) : <a class="code" href="structdazeus_1_1_database_config.html#a8c0c7cc2c7cbd807ec49dcb3dbb493c2">type</a>(s.<a class="code" href="structdazeus_1_1_database_config.html#a8c0c7cc2c7cbd807ec49dcb3dbb493c2">type</a>),
+<a name="l00022"></a>00022     <a class="code" href="structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04">hostname</a>(s.<a class="code" href="structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04">hostname</a>), <a class="code" href="structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d">port</a>(s.<a class="code" href="structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d">port</a>), <a class="code" href="structdazeus_1_1_database_config.html#ac41dd98efba2c6ab59a1ada191666830">username</a>(s.<a class="code" href="structdazeus_1_1_database_config.html#ac41dd98efba2c6ab59a1ada191666830">username</a>),
+<a name="l00023"></a>00023     <a class="code" href="structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d">password</a>(s.<a class="code" href="structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d">password</a>), <a class="code" href="structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7">database</a>(s.<a class="code" href="structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7">database</a>), <a class="code" href="config_8cpp.html#a7b31c656c8554c054ae2cd3559ea752f">options</a>(s.<a class="code" href="config_8cpp.html#a7b31c656c8554c054ae2cd3559ea752f">options</a>) {}
+<a name="l00024"></a><a class="code" href="structdazeus_1_1_database_config.html#a2b2821e42b883b96c9134c8a716143d9">00024</a>   <span class="keyword">const</span> <a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a> &amp;<a class="code" href="structdazeus_1_1_database_config.html#a2b2821e42b883b96c9134c8a716143d9">operator=</a>(<span class="keyword">const</span> <a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a> &amp;s) { <a class="code" href="structdazeus_1_1_database_config.html#a8c0c7cc2c7cbd807ec49dcb3dbb493c2">type</a> = s.<a class="code" href="structdazeus_1_1_database_config.html#a8c0c7cc2c7cbd807ec49dcb3dbb493c2">type</a>;
+<a name="l00025"></a>00025     <a class="code" href="structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04">hostname</a> = s.<a class="code" href="structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04">hostname</a>; <a class="code" href="structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d">port</a> = s.<a class="code" href="structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d">port</a>; <a class="code" href="structdazeus_1_1_database_config.html#ac41dd98efba2c6ab59a1ada191666830">username</a> = s.<a class="code" href="structdazeus_1_1_database_config.html#ac41dd98efba2c6ab59a1ada191666830">username</a>; <a class="code" href="structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d">password</a> =
+<a name="l00026"></a>00026     s.<a class="code" href="structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d">password</a>; <a class="code" href="structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7">database</a> = s.<a class="code" href="structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7">database</a>; <a class="code" href="config_8cpp.html#a7b31c656c8554c054ae2cd3559ea752f">options</a> = s.<a class="code" href="structdazeus_1_1_database_config.html#a3c2e40b1ec0c51bee64a8ec4de7854c2">options</a>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="structdazeus_1_1_database_config.html#a8c0c7cc2c7cbd807ec49dcb3dbb493c2">00028</a>   std::string <a class="code" href="structdazeus_1_1_database_config.html#a8c0c7cc2c7cbd807ec49dcb3dbb493c2">type</a>;
+<a name="l00029"></a><a class="code" href="structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04">00029</a>   std::string <a class="code" href="structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04">hostname</a>;
+<a name="l00030"></a><a class="code" href="structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d">00030</a>   uint16_t <a class="code" href="structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d">port</a>;
+<a name="l00031"></a><a class="code" href="structdazeus_1_1_database_config.html#ac41dd98efba2c6ab59a1ada191666830">00031</a>   std::string <a class="code" href="structdazeus_1_1_database_config.html#ac41dd98efba2c6ab59a1ada191666830">username</a>;
+<a name="l00032"></a><a class="code" href="structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d">00032</a>   std::string <a class="code" href="structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d">password</a>;
+<a name="l00033"></a><a class="code" href="structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7">00033</a>   std::string <a class="code" href="structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7">database</a>;
+<a name="l00034"></a><a class="code" href="structdazeus_1_1_database_config.html#a3c2e40b1ec0c51bee64a8ec4de7854c2">00034</a>   std::string <a class="code" href="structdazeus_1_1_database_config.html#a3c2e40b1ec0c51bee64a8ec4de7854c2">options</a>;
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 
+<a name="l00051"></a><a class="code" href="classdazeus_1_1_database.html">00051</a> <span class="keyword">class </span><a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a>
+<a name="l00052"></a>00052 {
+<a name="l00053"></a>00053   <span class="keyword">public</span>:
+<a name="l00054"></a>00054           <a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a>( <span class="keyword">const</span> std::string &amp;hostname, uint16_t port,
+<a name="l00055"></a>00055                     <span class="keyword">const</span> std::string &amp;database = std::string(<span class="stringliteral">&quot;dazeus&quot;</span>),
+<a name="l00056"></a>00056                     <span class="keyword">const</span> std::string &amp;username = std::string(),
+<a name="l00057"></a>00057                     <span class="keyword">const</span> std::string &amp;password = std::string() );
+<a name="l00058"></a>00058          ~<a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a>();
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060     <span class="keywordtype">bool</span>            <a class="code" href="classdazeus_1_1_database.html#a5571a6a9bff6c898ba1c169cce472d67">open</a>();
+<a name="l00061"></a>00061     std::string     <a class="code" href="classdazeus_1_1_database.html#afcf2b094f4b5664f713d68dc390c12d4" title="Returns the last error in the QSqlDatabase object.">lastError</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063     std::string     <a class="code" href="classdazeus_1_1_database.html#a67f94e827c0844a5d30c473b43dac540" title="Retrieve property from database.">property</a>( <span class="keyword">const</span> std::string &amp;variable,
+<a name="l00064"></a>00064                               <span class="keyword">const</span> std::string &amp;networkScope  = std::string(),
+<a name="l00065"></a>00065                               <span class="keyword">const</span> std::string &amp;receiverScope = std::string(),
+<a name="l00066"></a>00066                               <span class="keyword">const</span> std::string &amp;senderScope   = std::string() );
+<a name="l00067"></a>00067     <span class="keywordtype">void</span>            <a class="code" href="classdazeus_1_1_database.html#a641ad16210bd081277cb1dd1570c3950">setProperty</a>( <span class="keyword">const</span> std::string &amp;variable,
+<a name="l00068"></a>00068                                  <span class="keyword">const</span> std::string &amp;value,
+<a name="l00069"></a>00069                                  <span class="keyword">const</span> std::string &amp;networkScope  = std::string(),
+<a name="l00070"></a>00070                                  <span class="keyword">const</span> std::string &amp;receiverScope = std::string(),
+<a name="l00071"></a>00071                                  <span class="keyword">const</span> std::string &amp;senderScope   = std::string());
+<a name="l00072"></a>00072     std::vector&lt;std::string&gt; <a class="code" href="classdazeus_1_1_database.html#a6774cb2e54edb86e4cc70592432b2e66" title="Retrieve all properties under a certain namespace.">propertyKeys</a>( <span class="keyword">const</span> std::string &amp;ns,
+<a name="l00073"></a>00073                                   <span class="keyword">const</span> std::string &amp;networkScope  = std::string(),
+<a name="l00074"></a>00074                                   <span class="keyword">const</span> std::string &amp;receiverScope = std::string(),
+<a name="l00075"></a>00075                                   <span class="keyword">const</span> std::string &amp;senderScope   = std::string() );
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077   <span class="keyword">private</span>:
+<a name="l00078"></a>00078     <span class="comment">// explicitly disable copy constructor</span>
+<a name="l00079"></a>00079     <a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a>(<span class="keyword">const</span> <a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a>&amp;);
+<a name="l00080"></a>00080     <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a>&amp;);
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082     <span class="keywordtype">void</span> *m_;
+<a name="l00083"></a>00083     std::string lastError_;
+<a name="l00084"></a>00084     std::string hostName_;
+<a name="l00085"></a>00085     std::string databaseName_;
+<a name="l00086"></a>00086     uint16_t    port_;
+<a name="l00087"></a>00087     std::string username_;
+<a name="l00088"></a>00088     std::string password_;
+<a name="l00089"></a>00089 };
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 }
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="database_8h.html">database.h</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -168,7 +173,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

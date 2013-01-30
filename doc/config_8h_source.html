@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -92,81 +93,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;stdint.h&gt;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">struct </span><a class="code" href="struct_config_reader_state.html">ConfigReaderState</a>;
+<a name="l00015"></a>00015 <span class="keyword">namespace </span><a class="code" href="structdazeus__struct.html">dazeus</a> {
 <a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="struct_global_config.html">00017</a> <span class="keyword">struct </span><a class="code" href="struct_global_config.html">GlobalConfig</a> {
-<a name="l00018"></a><a class="code" href="struct_global_config.html#af6399937eac62dad70967a840b576f6b">00018</a>         <a class="code" href="struct_global_config.html#af6399937eac62dad70967a840b576f6b">GlobalConfig</a>()
-<a name="l00019"></a>00019         : <a class="code" href="struct_global_config.html#a9dde4ae5f7c941e960c563ecb4a9cefc">default_nickname</a>(<span class="stringliteral">&quot;DaZeus&quot;</span>)
-<a name="l00020"></a>00020         , <a class="code" href="struct_global_config.html#ab20d44fe88ba40370a6cb02e638a20e3">default_username</a>(<span class="stringliteral">&quot;DaZeus&quot;</span>)
-<a name="l00021"></a>00021         , <a class="code" href="struct_global_config.html#a9e4550266069c4388ac1591e59b9d0e7">default_fullname</a>(<span class="stringliteral">&quot;DaZeus IRC bot&quot;</span>)
-<a name="l00022"></a>00022         , <a class="code" href="struct_global_config.html#a5904ff9c08ca74f6032164d53ca2b1d7">plugindirectory</a>(<span class="stringliteral">&quot;plugins&quot;</span>)
-<a name="l00023"></a>00023         , <a class="code" href="struct_global_config.html#a608f6d7b6a222bd45576745f20e5dc43">highlight</a>(<span class="stringliteral">&quot;}&quot;</span>) {}
-<a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="struct_global_config.html#a9dde4ae5f7c941e960c563ecb4a9cefc">00025</a>         std::string <a class="code" href="struct_global_config.html#a9dde4ae5f7c941e960c563ecb4a9cefc">default_nickname</a>;
-<a name="l00026"></a><a class="code" href="struct_global_config.html#ab20d44fe88ba40370a6cb02e638a20e3">00026</a>         std::string <a class="code" href="struct_global_config.html#ab20d44fe88ba40370a6cb02e638a20e3">default_username</a>;
-<a name="l00027"></a><a class="code" href="struct_global_config.html#a9e4550266069c4388ac1591e59b9d0e7">00027</a>         std::string <a class="code" href="struct_global_config.html#a9e4550266069c4388ac1591e59b9d0e7">default_fullname</a>;
-<a name="l00028"></a><a class="code" href="struct_global_config.html#a5904ff9c08ca74f6032164d53ca2b1d7">00028</a>         std::string <a class="code" href="struct_global_config.html#a5904ff9c08ca74f6032164d53ca2b1d7">plugindirectory</a>;
-<a name="l00029"></a><a class="code" href="struct_global_config.html#a608f6d7b6a222bd45576745f20e5dc43">00029</a>         std::string <a class="code" href="struct_global_config.html#a608f6d7b6a222bd45576745f20e5dc43">highlight</a>;
-<a name="l00030"></a>00030 };
-<a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="struct_plugin_config.html">00032</a> <span class="keyword">struct </span><a class="code" href="struct_plugin_config.html">PluginConfig</a> {
-<a name="l00033"></a><a class="code" href="struct_plugin_config.html#a1f70806618da92f3ff60a210dbae644f">00033</a>         <a class="code" href="struct_plugin_config.html#a1f70806618da92f3ff60a210dbae644f">PluginConfig</a>(std::string n) : <a class="code" href="struct_plugin_config.html#a20cf80f9fcf8ef504fb0b770f9840f17">name</a>(n) {}
-<a name="l00034"></a><a class="code" href="struct_plugin_config.html#a20cf80f9fcf8ef504fb0b770f9840f17">00034</a>         std::string <a class="code" href="struct_plugin_config.html#a20cf80f9fcf8ef504fb0b770f9840f17">name</a>;
-<a name="l00035"></a><a class="code" href="struct_plugin_config.html#a8bb83761414ef0af14be72a502245a26">00035</a>         std::string <a class="code" href="struct_plugin_config.html#a8bb83761414ef0af14be72a502245a26">path</a>;
-<a name="l00036"></a><a class="code" href="struct_plugin_config.html#abbcad4767513a47a1af1a2dfbceb5ace">00036</a>         std::string <a class="code" href="struct_plugin_config.html#abbcad4767513a47a1af1a2dfbceb5ace">executable</a>;
-<a name="l00037"></a><a class="code" href="struct_plugin_config.html#a240733190826ced95cac1a9095e8ce0a">00037</a>         std::string <a class="code" href="struct_plugin_config.html#a240733190826ced95cac1a9095e8ce0a">scope</a>;
-<a name="l00038"></a><a class="code" href="struct_plugin_config.html#a38d567942de7f80db37e6776e871e1c0">00038</a>         std::string <a class="code" href="struct_plugin_config.html#a38d567942de7f80db37e6776e871e1c0">parameters</a>;
-<a name="l00039"></a><a class="code" href="struct_plugin_config.html#a0fc5e42306137b73f59ef3a75df8cc0d">00039</a>         std::map&lt;std::string, std::string&gt; <a class="code" href="struct_plugin_config.html#a0fc5e42306137b73f59ef3a75df8cc0d">config</a>;
-<a name="l00040"></a>00040 };
-<a name="l00041"></a>00041 
-<a name="l00042"></a><a class="code" href="struct_socket_config.html">00042</a> <span class="keyword">struct </span><a class="code" href="struct_socket_config.html">SocketConfig</a> {
-<a name="l00043"></a><a class="code" href="struct_socket_config.html#a1c20ac40707a9b68053b8847719cf52a">00043</a>         <a class="code" href="struct_socket_config.html#a1c20ac40707a9b68053b8847719cf52a">SocketConfig</a>() : <a class="code" href="struct_socket_config.html#a116fc88b3db0bbbfbf01d6e0e2323ade">port</a>(0) {}
-<a name="l00044"></a><a class="code" href="struct_socket_config.html#a33fe4ac736f5874b926f44d5cc8c6b64">00044</a>         std::string <a class="code" href="struct_socket_config.html#a33fe4ac736f5874b926f44d5cc8c6b64">type</a>;
-<a name="l00045"></a><a class="code" href="struct_socket_config.html#a6c9d72a0479dcf95da5eb7c869b52dbc">00045</a>         std::string <a class="code" href="struct_socket_config.html#a6c9d72a0479dcf95da5eb7c869b52dbc">host</a>;
-<a name="l00046"></a><a class="code" href="struct_socket_config.html#a116fc88b3db0bbbfbf01d6e0e2323ade">00046</a>         uint16_t <a class="code" href="struct_socket_config.html#a116fc88b3db0bbbfbf01d6e0e2323ade">port</a>;
-<a name="l00047"></a><a class="code" href="struct_socket_config.html#a509addd0de2e11a490c6bab46727f58e">00047</a>         std::string <a class="code" href="struct_socket_config.html#a509addd0de2e11a490c6bab46727f58e">path</a>;
-<a name="l00048"></a>00048 };
-<a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="class_config_reader.html">00050</a> <span class="keyword">class </span><a class="code" href="class_config_reader.html">ConfigReader</a> {
-<a name="l00051"></a>00051         std::vector&lt;NetworkConfig*&gt; networks;
-<a name="l00052"></a>00052         std::vector&lt;PluginConfig*&gt; plugins;
-<a name="l00053"></a>00053         std::vector&lt;SocketConfig*&gt; sockets;
-<a name="l00054"></a>00054         <a class="code" href="struct_global_config.html">GlobalConfig</a> *global;
-<a name="l00055"></a>00055         <a class="code" href="struct_database_config.html">DatabaseConfig</a> *database;
-<a name="l00056"></a>00056         std::string file;
-<a name="l00057"></a>00057         <a class="code" href="struct_config_reader_state.html">ConfigReaderState</a> *state;
-<a name="l00058"></a>00058         <span class="keywordtype">bool</span> is_read;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="keyword">public</span>:
-<a name="l00061"></a><a class="code" href="struct_config_reader_1_1exception.html">00061</a>         <span class="keyword">struct </span><a class="code" href="struct_config_reader_1_1exception.html">exception</a> : <span class="keyword">public</span> std::runtime_error {
-<a name="l00062"></a><a class="code" href="struct_config_reader_1_1exception.html#ab60ffb37d4c4e5eec89d888eaf11db2a">00062</a>                 <a class="code" href="struct_config_reader_1_1exception.html#ab60ffb37d4c4e5eec89d888eaf11db2a">exception</a>(std::string e) : std::runtime_error(e) {}
-<a name="l00063"></a>00063         };
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065         <a class="code" href="class_config_reader.html#afa28c38668a2d4a0e86224b7f6d384e2">ConfigReader</a>(std::string file);
-<a name="l00066"></a>00066         <a class="code" href="class_config_reader.html#afa28c38668a2d4a0e86224b7f6d384e2">ConfigReader</a>(<a class="code" href="class_config_reader.html">ConfigReader</a> <span class="keyword">const</span>&amp;);
-<a name="l00067"></a>00067         <a class="code" href="class_config_reader.html">ConfigReader</a> &amp;<a class="code" href="class_config_reader.html#a01e92e893b086d10952c1f389baeb90e">operator=</a>(<a class="code" href="class_config_reader.html">ConfigReader</a> <span class="keyword">const</span>&amp;);
-<a name="l00068"></a>00068         <a class="code" href="class_config_reader.html#a4c4009264e63a116bdc8d5a24ef4142d">~ConfigReader</a>();
-<a name="l00069"></a>00069 
-<a name="l00070"></a><a class="code" href="class_config_reader.html#afed57b5804584b26d505a63979c62b9a">00070</a>         <span class="keywordtype">bool</span> <a class="code" href="class_config_reader.html#afed57b5804584b26d505a63979c62b9a">isRead</a>() { <span class="keywordflow">return</span> is_read; }
-<a name="l00071"></a>00071         <span class="keywordtype">void</span> <a class="code" href="class_config_reader.html#a0ed397c6acf11042441d55334e9e21e1">read</a>();
-<a name="l00072"></a>00072         std::string <a class="code" href="class_config_reader.html#aee3da711b06a356688f4d336e50680c6">error</a>();
-<a name="l00073"></a><a class="code" href="class_config_reader.html#aad2f9dd253dde0094bb6a9bf5741f720">00073</a>         <a class="code" href="struct_config_reader_state.html">ConfigReaderState</a> *<a class="code" href="class_config_reader.html#aad2f9dd253dde0094bb6a9bf5741f720">_state</a>() { <span class="keywordflow">return</span> state; }
-<a name="l00074"></a>00074 
-<a name="l00075"></a><a class="code" href="class_config_reader.html#a95700749b050fabe322f009ef6c75547">00075</a>         <span class="keyword">const</span> std::vector&lt;NetworkConfig*&gt; &amp;<a class="code" href="class_config_reader.html#a95700749b050fabe322f009ef6c75547">getNetworks</a>() { <span class="keywordflow">return</span> networks; }
-<a name="l00076"></a><a class="code" href="class_config_reader.html#a8705508e8dd5080a9a8d4ddf872e180d">00076</a>         <span class="keyword">const</span> std::vector&lt;PluginConfig*&gt; &amp;<a class="code" href="class_config_reader.html#a8705508e8dd5080a9a8d4ddf872e180d">getPlugins</a>() { <span class="keywordflow">return</span> plugins; }
-<a name="l00077"></a><a class="code" href="class_config_reader.html#a67a39db8ea43505d6237933840e4eef8">00077</a>         <span class="keyword">const</span> std::vector&lt;SocketConfig*&gt; &amp;<a class="code" href="class_config_reader.html#a67a39db8ea43505d6237933840e4eef8">getSockets</a>() { <span class="keywordflow">return</span> sockets; }
-<a name="l00078"></a><a class="code" href="class_config_reader.html#a5e465d27e1bbcfddc78ea27d576f2ac2">00078</a>         <a class="code" href="struct_global_config.html">GlobalConfig</a> *<a class="code" href="class_config_reader.html#a5e465d27e1bbcfddc78ea27d576f2ac2">getGlobalConfig</a>() { <span class="keywordflow">return</span> global; }
-<a name="l00079"></a><a class="code" href="class_config_reader.html#a539e02b85f7de38426bb131ba94c3cff">00079</a>         <a class="code" href="struct_database_config.html">DatabaseConfig</a> *<a class="code" href="class_config_reader.html#a539e02b85f7de38426bb131ba94c3cff">getDatabaseConfig</a>() { <span class="keywordflow">return</span> database; }
-<a name="l00080"></a><a class="code" href="class_config_reader.html#a7bf06f9b56c62487cf83958a06488d38">00080</a>         std::string &amp;<a class="code" href="class_config_reader.html#a7bf06f9b56c62487cf83958a06488d38">getFile</a>() { <span class="keywordflow">return</span> file; }
-<a name="l00081"></a>00081 };
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="preprocessor">#endif</span>
+<a name="l00017"></a>00017 <span class="keyword">struct </span>ConfigReaderState;
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="structdazeus_1_1_global_config.html">00019</a> <span class="keyword">struct </span><a class="code" href="structdazeus_1_1_global_config.html">GlobalConfig</a> {
+<a name="l00020"></a><a class="code" href="structdazeus_1_1_global_config.html#ab8aa4749a9e5f151df30814c4677ca3a">00020</a>         <a class="code" href="structdazeus_1_1_global_config.html">GlobalConfig</a>()
+<a name="l00021"></a>00021         : <a class="code" href="structdazeus_1_1_global_config.html#a743662ae15a5218d36c6778a516ff824">default_nickname</a>(<span class="stringliteral">&quot;DaZeus&quot;</span>)
+<a name="l00022"></a>00022         , <a class="code" href="structdazeus_1_1_global_config.html#af9dc3b977ee15d3b527a0f2d7d4649cf">default_username</a>(<span class="stringliteral">&quot;DaZeus&quot;</span>)
+<a name="l00023"></a>00023         , <a class="code" href="structdazeus_1_1_global_config.html#a66a89921ffec7a4ff5d7164d65665cec">default_fullname</a>(<span class="stringliteral">&quot;DaZeus IRC bot&quot;</span>)
+<a name="l00024"></a>00024         , <a class="code" href="structdazeus_1_1_global_config.html#a48e0163b9fa38d7bbb5894cfbeb00a90">plugindirectory</a>(<span class="stringliteral">&quot;plugins&quot;</span>)
+<a name="l00025"></a>00025         , <a class="code" href="structdazeus_1_1_global_config.html#a3934adcd0ca0d968699f539a2aadfc8e">highlight</a>(<span class="stringliteral">&quot;}&quot;</span>) {}
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="structdazeus_1_1_global_config.html#a743662ae15a5218d36c6778a516ff824">00027</a>         std::string <a class="code" href="structdazeus_1_1_global_config.html#a743662ae15a5218d36c6778a516ff824">default_nickname</a>;
+<a name="l00028"></a><a class="code" href="structdazeus_1_1_global_config.html#af9dc3b977ee15d3b527a0f2d7d4649cf">00028</a>         std::string <a class="code" href="structdazeus_1_1_global_config.html#af9dc3b977ee15d3b527a0f2d7d4649cf">default_username</a>;
+<a name="l00029"></a><a class="code" href="structdazeus_1_1_global_config.html#a66a89921ffec7a4ff5d7164d65665cec">00029</a>         std::string <a class="code" href="structdazeus_1_1_global_config.html#a66a89921ffec7a4ff5d7164d65665cec">default_fullname</a>;
+<a name="l00030"></a><a class="code" href="structdazeus_1_1_global_config.html#a48e0163b9fa38d7bbb5894cfbeb00a90">00030</a>         std::string <a class="code" href="structdazeus_1_1_global_config.html#a48e0163b9fa38d7bbb5894cfbeb00a90">plugindirectory</a>;
+<a name="l00031"></a><a class="code" href="structdazeus_1_1_global_config.html#a3934adcd0ca0d968699f539a2aadfc8e">00031</a>         std::string <a class="code" href="structdazeus_1_1_global_config.html#a3934adcd0ca0d968699f539a2aadfc8e">highlight</a>;
+<a name="l00032"></a>00032 };
+<a name="l00033"></a>00033 
+<a name="l00034"></a><a class="code" href="structdazeus_1_1_plugin_config.html">00034</a> <span class="keyword">struct </span><a class="code" href="structdazeus_1_1_plugin_config.html">PluginConfig</a> {
+<a name="l00035"></a><a class="code" href="structdazeus_1_1_plugin_config.html#a0d685ddaee2be4b3485f052644d99068">00035</a>         <a class="code" href="structdazeus_1_1_plugin_config.html#a0d685ddaee2be4b3485f052644d99068">PluginConfig</a>(std::string n) : <a class="code" href="structdazeus_1_1_plugin_config.html#abe64037adb0b229b00823eef921e38fc">name</a>(n) {}
+<a name="l00036"></a><a class="code" href="structdazeus_1_1_plugin_config.html#abe64037adb0b229b00823eef921e38fc">00036</a>         std::string <a class="code" href="structdazeus_1_1_plugin_config.html#abe64037adb0b229b00823eef921e38fc">name</a>;
+<a name="l00037"></a><a class="code" href="structdazeus_1_1_plugin_config.html#a687d6dcba96c611efbc35463b07bf04d">00037</a>         std::string <a class="code" href="structdazeus_1_1_plugin_config.html#a687d6dcba96c611efbc35463b07bf04d">path</a>;
+<a name="l00038"></a><a class="code" href="structdazeus_1_1_plugin_config.html#ac74df0d3aca00a1310746f6fbda34db8">00038</a>         std::string <a class="code" href="structdazeus_1_1_plugin_config.html#ac74df0d3aca00a1310746f6fbda34db8">executable</a>;
+<a name="l00039"></a><a class="code" href="structdazeus_1_1_plugin_config.html#af02ba4fca067abd9d19379e4d9550f14">00039</a>         std::string <a class="code" href="structdazeus_1_1_plugin_config.html#af02ba4fca067abd9d19379e4d9550f14">scope</a>;
+<a name="l00040"></a><a class="code" href="structdazeus_1_1_plugin_config.html#a5e87ad0363462a8dc3fc463a90c9c6d9">00040</a>         std::string <a class="code" href="structdazeus_1_1_plugin_config.html#a5e87ad0363462a8dc3fc463a90c9c6d9">parameters</a>;
+<a name="l00041"></a><a class="code" href="structdazeus_1_1_plugin_config.html#a0b9b14cd89295c84934b7c31b1b1f42c">00041</a>         std::map&lt;std::string, std::string&gt; <a class="code" href="structdazeus_1_1_plugin_config.html#a0b9b14cd89295c84934b7c31b1b1f42c">config</a>;
+<a name="l00042"></a>00042 };
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="structdazeus_1_1_socket_config.html">00044</a> <span class="keyword">struct </span><a class="code" href="structdazeus_1_1_socket_config.html">SocketConfig</a> {
+<a name="l00045"></a><a class="code" href="structdazeus_1_1_socket_config.html#a4c3f2ace075b166cb2a2a16ff8168855">00045</a>         <a class="code" href="structdazeus_1_1_socket_config.html#a4c3f2ace075b166cb2a2a16ff8168855">SocketConfig</a>() : <a class="code" href="structdazeus_1_1_socket_config.html#a8cdae3e8d30fa478367c4a578f05cf51">port</a>(0) {}
+<a name="l00046"></a><a class="code" href="structdazeus_1_1_socket_config.html#a4b8550955ee286d473f475b737021b88">00046</a>         std::string <a class="code" href="structdazeus_1_1_socket_config.html#a4b8550955ee286d473f475b737021b88">type</a>;
+<a name="l00047"></a><a class="code" href="structdazeus_1_1_socket_config.html#a40d8b7d7c1f9c56785c666728f767ae2">00047</a>         std::string <a class="code" href="structdazeus_1_1_socket_config.html#a40d8b7d7c1f9c56785c666728f767ae2">host</a>;
+<a name="l00048"></a><a class="code" href="structdazeus_1_1_socket_config.html#a8cdae3e8d30fa478367c4a578f05cf51">00048</a>         uint16_t <a class="code" href="structdazeus_1_1_socket_config.html#a8cdae3e8d30fa478367c4a578f05cf51">port</a>;
+<a name="l00049"></a><a class="code" href="structdazeus_1_1_socket_config.html#a1b7f602285768d19aa83bcb6e99cf23a">00049</a>         std::string <a class="code" href="structdazeus_1_1_socket_config.html#a1b7f602285768d19aa83bcb6e99cf23a">path</a>;
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="classdazeus_1_1_config_reader.html">00052</a> <span class="keyword">class </span><a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a> {
+<a name="l00053"></a>00053         std::vector&lt;NetworkConfig*&gt; networks;
+<a name="l00054"></a>00054         std::vector&lt;PluginConfig*&gt; plugins;
+<a name="l00055"></a>00055         std::vector&lt;SocketConfig*&gt; sockets;
+<a name="l00056"></a>00056         <a class="code" href="structdazeus_1_1_global_config.html">GlobalConfig</a> *global;
+<a name="l00057"></a>00057         <a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a> *database;
+<a name="l00058"></a>00058         std::string file;
+<a name="l00059"></a>00059         <a class="code" href="structdazeus_1_1_config_reader_state.html">ConfigReaderState</a> *state;
+<a name="l00060"></a>00060         <span class="keywordtype">bool</span> is_read;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keyword">public</span>:
+<a name="l00063"></a><a class="code" href="structdazeus_1_1_config_reader_1_1exception.html">00063</a>         <span class="keyword">struct </span><a class="code" href="structdazeus_1_1_config_reader_1_1exception.html">exception</a> : <span class="keyword">public</span> std::runtime_error {
+<a name="l00064"></a><a class="code" href="structdazeus_1_1_config_reader_1_1exception.html#ab765c34e2b1cb30a4eeab85060265215">00064</a>                 <a class="code" href="structdazeus_1_1_config_reader_1_1exception.html#ab765c34e2b1cb30a4eeab85060265215">exception</a>(std::string e) : std::runtime_error(e) {}
+<a name="l00065"></a>00065         };
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         <a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a>(std::string file);
+<a name="l00068"></a>00068         <a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a>(<a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a> <span class="keyword">const</span>&amp;);
+<a name="l00069"></a>00069         <a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a> &amp;operator=(<a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a> <span class="keyword">const</span>&amp;);
+<a name="l00070"></a>00070         ~<a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a>();
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="classdazeus_1_1_config_reader.html#a47ffcdbb2ab4ffbcc4dc8df6d674ca57">00072</a>         <span class="keywordtype">bool</span> <a class="code" href="classdazeus_1_1_config_reader.html#a47ffcdbb2ab4ffbcc4dc8df6d674ca57">isRead</a>() { <span class="keywordflow">return</span> is_read; }
+<a name="l00073"></a>00073         <span class="keywordtype">void</span> read();
+<a name="l00074"></a>00074         std::string <a class="code" href="structdazeus__struct.html#a58a86e0b7d815563c9e97cc69a9709a7">error</a>();
+<a name="l00075"></a><a class="code" href="classdazeus_1_1_config_reader.html#a91ed7bb8a471d436a3b4a0f03094cadd">00075</a>         <a class="code" href="structdazeus_1_1_config_reader_state.html">ConfigReaderState</a> *<a class="code" href="classdazeus_1_1_config_reader.html#a91ed7bb8a471d436a3b4a0f03094cadd">_state</a>() { <span class="keywordflow">return</span> state; }
+<a name="l00076"></a>00076 
+<a name="l00077"></a><a class="code" href="classdazeus_1_1_config_reader.html#ae55bb53cb5c0267a71dcff090c10d4f9">00077</a>         <span class="keyword">const</span> std::vector&lt;NetworkConfig*&gt; &amp;<a class="code" href="classdazeus_1_1_config_reader.html#ae55bb53cb5c0267a71dcff090c10d4f9">getNetworks</a>() { <span class="keywordflow">return</span> networks; }
+<a name="l00078"></a><a class="code" href="classdazeus_1_1_config_reader.html#afae74dbf98254163ea6be8c8452e0862">00078</a>         <span class="keyword">const</span> std::vector&lt;PluginConfig*&gt; &amp;<a class="code" href="classdazeus_1_1_config_reader.html#afae74dbf98254163ea6be8c8452e0862">getPlugins</a>() { <span class="keywordflow">return</span> plugins; }
+<a name="l00079"></a><a class="code" href="classdazeus_1_1_config_reader.html#a718f1b8f04690adaf68e6fe3d1302807">00079</a>         <span class="keyword">const</span> std::vector&lt;SocketConfig*&gt; &amp;<a class="code" href="classdazeus_1_1_config_reader.html#a718f1b8f04690adaf68e6fe3d1302807">getSockets</a>() { <span class="keywordflow">return</span> sockets; }
+<a name="l00080"></a><a class="code" href="classdazeus_1_1_config_reader.html#aa8741b67f93605dd18b8e5c3693d15dc">00080</a>         <a class="code" href="structdazeus_1_1_global_config.html">GlobalConfig</a> *<a class="code" href="classdazeus_1_1_config_reader.html#aa8741b67f93605dd18b8e5c3693d15dc">getGlobalConfig</a>() { <span class="keywordflow">return</span> global; }
+<a name="l00081"></a><a class="code" href="classdazeus_1_1_config_reader.html#a65e579db9999dd899e31ee37b8fc32ed">00081</a>         <a class="code" href="structdazeus_1_1_database_config.html">DatabaseConfig</a> *<a class="code" href="classdazeus_1_1_config_reader.html#a65e579db9999dd899e31ee37b8fc32ed">getDatabaseConfig</a>() { <span class="keywordflow">return</span> database; }
+<a name="l00082"></a><a class="code" href="classdazeus_1_1_config_reader.html#ae06db37762834dfebad2bbbb7e733500">00082</a>         std::string &amp;<a class="code" href="classdazeus_1_1_config_reader.html#ae06db37762834dfebad2bbbb7e733500">getFile</a>() { <span class="keywordflow">return</span> file; }
+<a name="l00083"></a>00083 };
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 }
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="config_8h.html">config.h</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -176,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

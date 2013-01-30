@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -333,7 +334,7 @@ Functions</h2></td></tr>
 <p>Returns a linked list of channels on this <a class="el" href="class_da_zeus.html">DaZeus</a> instance, or NULL if an error occured or there were no channels. Remember to free the returned structure with <a class="el" href="libdazeus_8c.html#aa523033f30ff02a7b5ca7b27db0d9846">libdazeus_stringlist_free()</a>.</p>
 <p>Returns a linked list of channels on this <a class="el" href="class_da_zeus.html">DaZeus</a> instance, or NULL if an error occured. Remember to free the returned structure with <a class="el" href="libdazeus_8c.html#aa523033f30ff02a7b5ca7b27db0d9846">libdazeus_stringlist_free()</a>. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00618">618</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00609">609</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -353,7 +354,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 <p>Clean up a dazeus instance. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00561">561</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00555">555</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -373,7 +374,7 @@ Functions</h2></td></tr>
 <p>Create a new libdazeus instance, or NULL if there was no memory.</p>
 <p>Create a new libdazeus instance. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00498">498</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00492">492</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -393,7 +394,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 <p>Retrieve the last error generated or NULL if there was no error. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00515">515</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00509">509</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -413,7 +414,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 <p>Free an event returned by libdazeus_handle_event. This function calls libdazeus_stringlist_free on the 'parameters' property, so don't do this yourself. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00916">916</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00879">879</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -450,7 +451,7 @@ Functions</h2></td></tr>
 <p>Retrieve the value of a variable in the <a class="el" href="class_da_zeus.html">DaZeus</a> 2 database. Remember to free() the returned variable after use. Returns NULL if the variable did not exist, or an error occured.</p>
 <p>Retrieve the value of a variable in the <a class="el" href="class_da_zeus.html">DaZeus</a> 2 database. Remember to free() the returned variable after use. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00715">715</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00698">698</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -470,7 +471,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 <p>Get the internal file descriptor of this dazeus instance. Do not read or write from/to this socket. This method can be used to add the given file descriptor to an event loop (i.e. using select()). Returns 0 if no connection was made, or it has recently failed. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00553">553</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00547">547</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -501,7 +502,7 @@ Functions</h2></td></tr>
 <p>Return the next event received (in order of coming in). Don't forget to free the resulting structure using libdazeus_event_free. Do NOT libdazeus_stringlist_free its 'parameters' property, though. If the 'timeout' parameter is -1, will wait forever until the first event. If the 'timeout' parameter is 0, will try getting an event exactly once. If the 'timeout' parameter is &gt; 0, will try that many seconds to get an event. If this method returns NULL, it means either an error occured, or there was no event inside the given timeout period.</p>
 <p>Return the next event received (in order of coming in). Don't forget to free the resulting structure using libdazeus_event_free. Do NOT libdazeus_stringlist_free its 'parameters' property, though. If the 'timeout' parameter is -1, will wait forever until the first event. If the 'timeout' parameter is 0, will try getting an event exactly once. If the 'timeout' parameter is &gt; 0, will try that many seconds to get an event. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00878">878</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00841">841</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -544,7 +545,7 @@ Functions</h2></td></tr>
 <p>Send a message to an IRC channel or user. Returns 1 if the call succeeded.</p>
 <p>Send a message to an IRC channel or user. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00665">665</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00652">652</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -565,7 +566,7 @@ Functions</h2></td></tr>
 <p>Returns a linked list of networks on this <a class="el" href="class_da_zeus.html">DaZeus</a> instance, or NULL if an error occured or there were no networks. Remember to free the returned structure with libdazeus_networks_free().</p>
 <p>Returns a linked list of networks on this <a class="el" href="class_da_zeus.html">DaZeus</a> instance, or NULL if an error occured. Remember to free the returned structure with <a class="el" href="libdazeus_8c.html#aa523033f30ff02a7b5ca7b27db0d9846">libdazeus_stringlist_free()</a>. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00574">574</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00568">568</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -596,7 +597,7 @@ Functions</h2></td></tr>
 <p>Connect this dazeus instance. Takes socket location as its only parameter. Socket can be either of the form "unix:/path/to/unix/socket" or "tcp:hostname:port" (including "tcp:127.0.0.1:1234"). Returns 1 on success.</p>
 <p>Connect this dazeus instance. Takes socket location as its only parameter. Socket can be either of the form "unix:/path/to/unix/socket" or "tcp:hostname:port" (including "tcp:127.0.0.1:1234"). </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00525">525</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00519">519</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -615,7 +616,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00487">487</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00481">481</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -634,7 +635,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 <p>Variable scope variable constructors. Don't forget to clean them up with <a class="el" href="libdazeus_8c.html#aa82e7a78666a27ad6d2683c698fe496b">libdazeus_scope_free()</a> too! </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00453">453</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00447">447</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -653,7 +654,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00463">463</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00457">457</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -682,7 +683,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00471">471</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00465">465</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -717,7 +718,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00479">479</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00473">473</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -760,7 +761,7 @@ Functions</h2></td></tr>
 <p>Set the value of a variable in the <a class="el" href="class_da_zeus.html">DaZeus</a> 2 database. Returns 1 if the call succeeded.</p>
 <p>Set the value of a variable in the <a class="el" href="class_da_zeus.html">DaZeus</a> 2 database. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00763">763</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00738">738</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -780,7 +781,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 <p>Clean up memory allocated by earlier stringlist functions. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00701">701</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00684">684</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -811,7 +812,7 @@ Functions</h2></td></tr>
 <p>Subscribe to a <a class="el" href="class_da_zeus.html">DaZeus</a> 2 Event. Returns 1 if the call succeeded.</p>
 <p>Subscribe to a <a class="el" href="class_da_zeus.html">DaZeus</a> 2 Event. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00841">841</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00807">807</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -848,7 +849,7 @@ Functions</h2></td></tr>
 <p>Forget a variable in the <a class="el" href="class_da_zeus.html">DaZeus</a> 2 database. Returns 1 if the call succeeded.</p>
 <p>Forget a variable in the <a class="el" href="class_da_zeus.html">DaZeus</a> 2 database. </p>
 
-<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00803">803</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
+<p>Definition at line <a class="el" href="libdazeus_8c_source.html#l00773">773</a> of file <a class="el" href="libdazeus_8c_source.html">libdazeus.c</a>.</p>
 
 </div>
 </div>
@@ -857,7 +858,7 @@ Functions</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="libdazeus_8h.html">libdazeus.h</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -867,7 +868,7 @@ Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

@@ -1,5 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$database_8h.html" title="database.h" alt="" coords="35,161,120,189"/>
-<area shape="rect" id="node11" href="$config_8h.html" title="config.h" alt="" coords="140,83,207,111"/>
-<area shape="rect" id="node13" href="$network_8h.html" title="network.h" alt="" coords="296,161,373,189"/>
+<area shape="rect" id="node3" href="$database_8h.html" title="database.h" alt="" coords="196,161,281,189"/>
+<area shape="rect" id="node11" href="$config_8h.html" title="config.h" alt="" coords="117,83,184,111"/>
+<area shape="rect" id="node26" href="$utils_8h.html" title="utils.h" alt="" coords="407,161,463,189"/>
+<area shape="rect" id="node13" href="$network_8h.html" title="network.h" alt="" coords="305,161,383,189"/>
 </map>

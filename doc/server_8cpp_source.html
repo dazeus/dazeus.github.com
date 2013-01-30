@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -99,22 +100,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00019"></a>00019 
 <a name="l00020"></a><a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">00020</a> <span class="preprocessor">#define IRC (irc_session_t*)irc_</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span>
-<a name="l00022"></a><a class="code" href="class_server.html#ad34ae67094cd96376f1ccda885d63d51">00022</a> std::string <a class="code" href="class_server.html#ad34ae67094cd96376f1ccda885d63d51">Server::toString</a>(<span class="keyword">const</span> <a class="code" href="class_server.html">Server</a> *s)
+<a name="l00022"></a><a class="code" href="classdazeus_1_1_server.html#abcdb92aa235148cddb7bb3505bf6b925">00022</a> std::string <a class="code" href="classdazeus_1_1_server.html#abcdb92aa235148cddb7bb3505bf6b925">dazeus::Server::toString</a>(<span class="keyword">const</span> <a class="code" href="classdazeus_1_1_server.html">Server</a> *s)
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024         std::stringstream res;
 <a name="l00025"></a>00025         res &lt;&lt; <span class="stringliteral">&quot;Server[&quot;</span>;
 <a name="l00026"></a>00026         <span class="keywordflow">if</span>(s  == 0 ) {
 <a name="l00027"></a>00027                 res &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;
 <a name="l00028"></a>00028         } <span class="keywordflow">else</span> {
-<a name="l00029"></a>00029                 <span class="keyword">const</span> <a class="code" href="struct_server_config.html">ServerConfig</a> *sc = s-&gt;<a class="code" href="class_server.html#ab9fd8158cb2e83d2e7f61c808d55676a">config</a>();
-<a name="l00030"></a>00030                 res &lt;&lt; sc-&gt;<a class="code" href="struct_server_config.html#aea03a861d1838d4a9e51c0944c0ed4aa">host</a> &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; sc-&gt;<a class="code" href="struct_server_config.html#ab49ab0a1fa996da2794a5a8003386702">port</a>;
+<a name="l00029"></a>00029                 <span class="keyword">const</span> <a class="code" href="structdazeus_1_1_server_config.html">ServerConfig</a> *sc = s-&gt;<a class="code" href="classdazeus_1_1_server.html#a86e7fad4aea3c08dfa0bd5ebe4722c41">config</a>();
+<a name="l00030"></a>00030                 res &lt;&lt; sc-&gt;<a class="code" href="structdazeus_1_1_server_config.html#ae0cd425a06eaee00795d707b3bcbd6e5">host</a> &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; sc-&gt;<a class="code" href="structdazeus_1_1_server_config.html#a9ff48206fbbcc4d23d9fd5f2ae56979c">port</a>;
 <a name="l00031"></a>00031         }
 <a name="l00032"></a>00032         res &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034         <span class="keywordflow">return</span> res.str();
 <a name="l00035"></a>00035 }
 <a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="class_server.html#a8a01bb23be8a6b6d6fca2b5b68ec904a">00037</a> <a class="code" href="class_server.html#a8a01bb23be8a6b6d6fca2b5b68ec904a">Server::Server</a>( <span class="keyword">const</span> <a class="code" href="struct_server_config.html">ServerConfig</a> *c, <a class="code" href="class_network.html">Network</a> *n )
+<a name="l00037"></a><a class="code" href="classdazeus_1_1_server.html#afc9cd7c7de91861048816946ffe7b704">00037</a> <a class="code" href="classdazeus_1_1_server.html#afc9cd7c7de91861048816946ffe7b704">dazeus::Server::Server</a>( <span class="keyword">const</span> <a class="code" href="structdazeus_1_1_server_config.html">ServerConfig</a> *c, <a class="code" href="classdazeus_1_1_network.html">Network</a> *n )
 <a name="l00038"></a>00038 : config_(c)
 <a name="l00039"></a>00039 , motd_()
 <a name="l00040"></a>00040 , network_(n)
@@ -125,93 +126,93 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00045"></a>00045 {
 <a name="l00046"></a>00046 }
 <a name="l00047"></a>00047 
-<a name="l00048"></a><a class="code" href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">00048</a> <a class="code" href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">Server::~Server</a>()
+<a name="l00048"></a><a class="code" href="classdazeus_1_1_server.html#a08f488e7506da3a2168bfdaa88ae6be6">00048</a> <a class="code" href="classdazeus_1_1_server.html#a08f488e7506da3a2168bfdaa88ae6be6">dazeus::Server::~Server</a>()
 <a name="l00049"></a>00049 {
 <a name="l00050"></a>00050         irc_destroy_session(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>);
 <a name="l00051"></a>00051 }
 <a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="class_server.html#ab9fd8158cb2e83d2e7f61c808d55676a">00053</a> <span class="keyword">const</span> <a class="code" href="struct_server_config.html">ServerConfig</a> *<a class="code" href="class_server.html#ab9fd8158cb2e83d2e7f61c808d55676a">Server::config</a>()<span class="keyword"> const</span>
+<a name="l00053"></a><a class="code" href="classdazeus_1_1_server.html#a86e7fad4aea3c08dfa0bd5ebe4722c41">00053</a> <span class="keyword">const</span> dazeus::ServerConfig *<a class="code" href="classdazeus_1_1_server.html#a86e7fad4aea3c08dfa0bd5ebe4722c41">dazeus::Server::config</a>()<span class="keyword"> const</span>
 <a name="l00054"></a>00054 <span class="keyword"></span>{
 <a name="l00055"></a>00055         <span class="keywordflow">return</span> config_;
 <a name="l00056"></a>00056 }
 <a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="class_server.html#af9b8cf6b8e03ac61bc15f1c98d3d8c6d">00058</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#af9b8cf6b8e03ac61bc15f1c98d3d8c6d">Server::disconnectFromServer</a>( <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1">Network::DisconnectReason</a> reason )
+<a name="l00058"></a><a class="code" href="classdazeus_1_1_server.html#af3de900d3321f24148e58509e788df7a">00058</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#af3de900d3321f24148e58509e788df7a">dazeus::Server::disconnectFromServer</a>( <a class="code" href="classdazeus_1_1_network.html#af5a6398d2b0c29e97e69da4443c91ed5">Network::DisconnectReason</a> reason )
 <a name="l00059"></a>00059 {
 <a name="l00060"></a>00060         std::string reasonString;
 <a name="l00061"></a>00061         <span class="keywordflow">switch</span>( reason )
 <a name="l00062"></a>00062         {
-<a name="l00063"></a>00063         <span class="keywordflow">case</span> <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1a4f3af58d7d7d26daf5111a91b227f440">Network::ShutdownReason</a>:
+<a name="l00063"></a>00063         <span class="keywordflow">case</span> Network::ShutdownReason:
 <a name="l00064"></a>00064                 reasonString = <span class="stringliteral">&quot;Shutting down&quot;</span>;
 <a name="l00065"></a>00065                 <span class="keywordflow">break</span>;
-<a name="l00066"></a>00066         <span class="keywordflow">case</span> <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1a0944c27c7558e556832eff4fdd0902ac">Network::ConfigurationReloadReason</a>:
+<a name="l00066"></a>00066         <span class="keywordflow">case</span> Network::ConfigurationReloadReason:
 <a name="l00067"></a>00067                 reasonString = <span class="stringliteral">&quot;Reloading configuration&quot;</span>;
 <a name="l00068"></a>00068                 <span class="keywordflow">break</span>;
-<a name="l00069"></a>00069         <span class="keywordflow">case</span> <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1aff0b065f082a7668ee24aa68ff6ea3df">Network::SwitchingServersReason</a>:
+<a name="l00069"></a>00069         <span class="keywordflow">case</span> Network::SwitchingServersReason:
 <a name="l00070"></a>00070                 reasonString = <span class="stringliteral">&quot;Switching servers&quot;</span>;
 <a name="l00071"></a>00071                 <span class="keywordflow">break</span>;
-<a name="l00072"></a>00072         <span class="keywordflow">case</span> <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1a2aa49fb23f2dbf41fb6d4322f400bcdc">Network::TimeoutReason</a>:
+<a name="l00072"></a>00072         <span class="keywordflow">case</span> Network::TimeoutReason:
 <a name="l00073"></a>00073                 reasonString = <span class="stringliteral">&quot;Timeout&quot;</span>;
 <a name="l00074"></a>00074                 <span class="keywordflow">break</span>;
-<a name="l00075"></a>00075         <span class="keywordflow">case</span> <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1aa2d401f0de0e06f3d4acacb173526f4c">Network::ErrorReason</a>:
+<a name="l00075"></a>00075         <span class="keywordflow">case</span> Network::ErrorReason:
 <a name="l00076"></a>00076                 reasonString = <span class="stringliteral">&quot;Unknown error&quot;</span>;
 <a name="l00077"></a>00077                 <span class="keywordflow">break</span>;
-<a name="l00078"></a>00078         <span class="keywordflow">case</span> <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1afa947fa196ca1cf5a2544c0f0bbe880c">Network::AdminRequestReason</a>:
+<a name="l00078"></a>00078         <span class="keywordflow">case</span> Network::AdminRequestReason:
 <a name="l00079"></a>00079                 reasonString = <span class="stringliteral">&quot;An admin asked me to disconnect&quot;</span>;
 <a name="l00080"></a>00080                 <span class="keywordflow">break</span>;
-<a name="l00081"></a>00081         <span class="keywordflow">case</span> <a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1a5ff198fd0f6faaf8dbcb2775834c7621">Network::UnknownReason</a>:
+<a name="l00081"></a>00081         <span class="keywordflow">case</span> Network::UnknownReason:
 <a name="l00082"></a>00082         <span class="keywordflow">default</span>:
 <a name="l00083"></a>00083                 reasonString = <span class="stringliteral">&quot;See you around!&quot;</span>;
 <a name="l00084"></a>00084         }
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086         <a class="code" href="class_server.html#a8a46de38600d66b8e27e38c72b7df713">quit</a>( reasonString );
+<a name="l00086"></a>00086         quit( reasonString );
 <a name="l00087"></a>00087 }
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 
-<a name="l00090"></a><a class="code" href="class_server.html#a82362a8128acfcd0806fcd5d0f996b99">00090</a> std::string <a class="code" href="class_server.html#a82362a8128acfcd0806fcd5d0f996b99">Server::motd</a>()<span class="keyword"> const</span>
+<a name="l00090"></a><a class="code" href="classdazeus_1_1_server.html#ada74143150600baa1b6ab4cc5c79737c">00090</a> std::string <a class="code" href="classdazeus_1_1_server.html#ada74143150600baa1b6ab4cc5c79737c">dazeus::Server::motd</a>()<span class="keyword"> const</span>
 <a name="l00091"></a>00091 <span class="keyword"></span>{
 <a name="l00092"></a>00092         fprintf(stderr, <span class="stringliteral">&quot;MOTD cannot be retrieved.\n&quot;</span>);
 <a name="l00093"></a>00093         <span class="keywordflow">return</span> std::string();
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
-<a name="l00096"></a><a class="code" href="class_server.html#a8a46de38600d66b8e27e38c72b7df713">00096</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#a8a46de38600d66b8e27e38c72b7df713">Server::quit</a>( <span class="keyword">const</span> std::string &amp;reason ) {
+<a name="l00096"></a><a class="code" href="classdazeus_1_1_server.html#ad4005e36b48780144ec34bb5f87994f4">00096</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#ad4005e36b48780144ec34bb5f87994f4">dazeus::Server::quit</a>( <span class="keyword">const</span> std::string &amp;reason ) {
 <a name="l00097"></a>00097         irc_cmd_quit(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, reason.c_str());
 <a name="l00098"></a>00098 }
 <a name="l00099"></a>00099 
-<a name="l00100"></a><a class="code" href="class_server.html#a1a5d36c2b741d120df42abbd5e365a35">00100</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#a1a5d36c2b741d120df42abbd5e365a35">Server::whois</a>( <span class="keyword">const</span> std::string &amp;destination ) {
+<a name="l00100"></a><a class="code" href="classdazeus_1_1_server.html#a323baf8aa4f172249ad164613b200a48">00100</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a323baf8aa4f172249ad164613b200a48">dazeus::Server::whois</a>( <span class="keyword">const</span> std::string &amp;destination ) {
 <a name="l00101"></a>00101         irc_cmd_whois(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, destination.c_str());
 <a name="l00102"></a>00102 }
 <a name="l00103"></a>00103 
-<a name="l00109"></a>00109 <span class="keywordtype">void</span> Server::ircEventMe( <span class="keyword">const</span> std::string &amp;eventname, <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;<a class="code" href="class_server.html#af9bea38e76ebf26c38ae248f2136f1fd">message</a>) {
+<a name="l00109"></a>00109 <span class="keywordtype">void</span> dazeus::Server::ircEventMe( <span class="keyword">const</span> std::string &amp;eventname, <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;message) {
 <a name="l00110"></a>00110         std::vector&lt;std::string&gt; parameters;
 <a name="l00111"></a>00111         parameters.push_back(destination);
 <a name="l00112"></a>00112         parameters.push_back(message);
-<a name="l00113"></a>00113         <a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">slotIrcEvent</a>(eventname, network_-&gt;<a class="code" href="class_network.html#a44378c1e02f9b35be13c498b460366fe">nick</a>(), parameters);
+<a name="l00113"></a>00113         slotIrcEvent(eventname, network_-&gt;nick(), parameters);
 <a name="l00114"></a>00114 }
 <a name="l00115"></a>00115 
-<a name="l00116"></a><a class="code" href="class_server.html#a88acb78fe4a0cdbbff9c900da4abb102">00116</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#a88acb78fe4a0cdbbff9c900da4abb102">Server::ctcpAction</a>( <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;message ) {
+<a name="l00116"></a><a class="code" href="classdazeus_1_1_server.html#a96f7c70c720978e31c84b8a26df8ef2a">00116</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a96f7c70c720978e31c84b8a26df8ef2a">dazeus::Server::ctcpAction</a>( <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;message ) {
 <a name="l00117"></a>00117         ircEventMe(<span class="stringliteral">&quot;ACTION_ME&quot;</span>, destination, message);
 <a name="l00118"></a>00118         irc_cmd_me(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, destination.c_str(), message.c_str());
 <a name="l00119"></a>00119 }
 <a name="l00120"></a>00120 
-<a name="l00121"></a><a class="code" href="class_server.html#ac1b87b89d65c72e11acb3e7a521de9a1">00121</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#ac1b87b89d65c72e11acb3e7a521de9a1">Server::names</a>( <span class="keyword">const</span> std::string &amp;channel ) {
+<a name="l00121"></a><a class="code" href="classdazeus_1_1_server.html#a742fd0b6b9130fa02158ac70b7246586">00121</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a742fd0b6b9130fa02158ac70b7246586">dazeus::Server::names</a>( <span class="keyword">const</span> std::string &amp;channel ) {
 <a name="l00122"></a>00122         irc_cmd_names(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, channel.c_str());
 <a name="l00123"></a>00123 }
 <a name="l00124"></a>00124 
-<a name="l00125"></a><a class="code" href="class_server.html#af741ee2f183503f57834c251dadda3e4">00125</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#af741ee2f183503f57834c251dadda3e4">Server::ctcpRequest</a>( <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;message ) {
+<a name="l00125"></a><a class="code" href="classdazeus_1_1_server.html#a0679c5cfdcc42160ae9d6a8c5733aa82">00125</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a0679c5cfdcc42160ae9d6a8c5733aa82">dazeus::Server::ctcpRequest</a>( <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;message ) {
 <a name="l00126"></a>00126         ircEventMe(<span class="stringliteral">&quot;CTCP_ME&quot;</span>, destination, message);
 <a name="l00127"></a>00127         irc_cmd_ctcp_request(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, destination.c_str(), message.c_str());
 <a name="l00128"></a>00128 }
 <a name="l00129"></a>00129 
-<a name="l00130"></a><a class="code" href="class_server.html#a032ee53e37cac417d546a8f2a8e8523a">00130</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#a032ee53e37cac417d546a8f2a8e8523a">Server::join</a>( <span class="keyword">const</span> std::string &amp;channel, <span class="keyword">const</span> std::string &amp;key ) {
+<a name="l00130"></a><a class="code" href="classdazeus_1_1_server.html#a0261573e8e4afa9cd8ce931a6fada3cb">00130</a> <span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a36189cc2b33c5edcac2440e56f8ea03e">dazeus::Server::join</a>( <span class="keyword">const</span> std::string &amp;channel, <span class="keyword">const</span> std::string &amp;key ) {
 <a name="l00131"></a>00131         irc_cmd_join(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, channel.c_str(), key.c_str());
 <a name="l00132"></a>00132 }
 <a name="l00133"></a>00133 
-<a name="l00134"></a><a class="code" href="class_server.html#a341278e35193a265b93602561dacd700">00134</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#a341278e35193a265b93602561dacd700">Server::part</a>( <span class="keyword">const</span> std::string &amp;channel, <span class="keyword">const</span> std::string &amp;) {
+<a name="l00134"></a><a class="code" href="classdazeus_1_1_server.html#a2790d15fe5d013eb7fbda1c5277da18c">00134</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a2790d15fe5d013eb7fbda1c5277da18c">dazeus::Server::part</a>( <span class="keyword">const</span> std::string &amp;channel, <span class="keyword">const</span> std::string &amp;) {
 <a name="l00135"></a>00135         <span class="comment">// TODO: also use &quot;reason&quot; here (patch libircclient for this)</span>
 <a name="l00136"></a>00136         irc_cmd_part(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, channel.c_str());
 <a name="l00137"></a>00137 }
 <a name="l00138"></a>00138 
-<a name="l00139"></a><a class="code" href="class_server.html#af9bea38e76ebf26c38ae248f2136f1fd">00139</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#af9bea38e76ebf26c38ae248f2136f1fd">Server::message</a>( <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;message ) {
+<a name="l00139"></a><a class="code" href="classdazeus_1_1_server.html#a19fc25ed70c3eb3c8289633bcaa340f6">00139</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a19fc25ed70c3eb3c8289633bcaa340f6">dazeus::Server::message</a>( <span class="keyword">const</span> std::string &amp;destination, <span class="keyword">const</span> std::string &amp;message ) {
 <a name="l00140"></a>00140         std::stringstream ss(message);
 <a name="l00141"></a>00141         std::string line;
 <a name="l00142"></a>00142         <span class="keywordflow">while</span>(std::getline(ss, line)) {
@@ -220,23 +221,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00145"></a>00145         }
 <a name="l00146"></a>00146 }
 <a name="l00147"></a>00147 
-<a name="l00148"></a><a class="code" href="class_server.html#a5bddeb77b9d5dbfe1d9fcdca18c85acb">00148</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#a5bddeb77b9d5dbfe1d9fcdca18c85acb">Server::ping</a>() {
+<a name="l00148"></a><a class="code" href="classdazeus_1_1_server.html#a3a739dbbdb54b53728911a479b31d53f">00148</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a3a739dbbdb54b53728911a479b31d53f">dazeus::Server::ping</a>() {
 <a name="l00149"></a>00149         irc_send_raw(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, <span class="stringliteral">&quot;PING&quot;</span>);
 <a name="l00150"></a>00150 }
 <a name="l00151"></a>00151 
-<a name="l00152"></a><a class="code" href="class_server.html#ac9f65ecf7d35427d0c6275735d8ee5fa">00152</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#ac9f65ecf7d35427d0c6275735d8ee5fa">Server::addDescriptors</a>(fd_set *in_set, fd_set *out_set, <span class="keywordtype">int</span> *maxfd) {
+<a name="l00152"></a><a class="code" href="classdazeus_1_1_server.html#a51ca2136019b1c6e0d9745326a952ee2">00152</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a51ca2136019b1c6e0d9745326a952ee2">dazeus::Server::addDescriptors</a>(fd_set *in_set, fd_set *out_set, <span class="keywordtype">int</span> *maxfd) {
 <a name="l00153"></a>00153         irc_add_select_descriptors(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, in_set, out_set, maxfd);
 <a name="l00154"></a>00154 }
 <a name="l00155"></a>00155 
-<a name="l00156"></a><a class="code" href="class_server.html#ace1a82345fb10de8485e4bda2ed6fa82">00156</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#ace1a82345fb10de8485e4bda2ed6fa82">Server::processDescriptors</a>(fd_set *in_set, fd_set *out_set) {
+<a name="l00156"></a><a class="code" href="classdazeus_1_1_server.html#a426b2684dfea8583bf52c7f33143c126">00156</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a426b2684dfea8583bf52c7f33143c126">dazeus::Server::processDescriptors</a>(fd_set *in_set, fd_set *out_set) {
 <a name="l00157"></a>00157         irc_process_select_descriptors(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, in_set, out_set);
 <a name="l00158"></a>00158 }
 <a name="l00159"></a>00159 
-<a name="l00160"></a><a class="code" href="class_server.html#abe96e58528adbcc55d5ae9d12941ac12">00160</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#abe96e58528adbcc55d5ae9d12941ac12">Server::slotNumericMessageReceived</a>( <span class="keyword">const</span> std::string &amp;origin, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> code,
+<a name="l00160"></a><a class="code" href="classdazeus_1_1_server.html#a528218d504313b6121a8da8652b2af5d">00160</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a528218d504313b6121a8da8652b2af5d">dazeus::Server::slotNumericMessageReceived</a>( <span class="keyword">const</span> std::string &amp;origin, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> code,
 <a name="l00161"></a>00161         <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;args )
 <a name="l00162"></a>00162 {
 <a name="l00163"></a>00163         assert( network_ != 0 );
-<a name="l00164"></a>00164         assert( network_-&gt;<a class="code" href="class_network.html#a5d3efaf3ed3b73fa85ce72ed71699064">activeServer</a>() == this );
+<a name="l00164"></a>00164         assert( network_-&gt;activeServer() == this );
 <a name="l00165"></a>00165         <span class="comment">// Also send out some other interesting events</span>
 <a name="l00166"></a>00166         <span class="keywordflow">if</span>(code == 311) {
 <a name="l00167"></a>00167                 in_whois_for_ = args[1];
@@ -253,14 +254,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00178"></a>00178                 std::vector&lt;std::string&gt; parameters;
 <a name="l00179"></a>00179                 parameters.push_back(in_whois_for_);
 <a name="l00180"></a>00180                 parameters.push_back(whois_identified_ ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);
-<a name="l00181"></a>00181                 <a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">slotIrcEvent</a>( <span class="stringliteral">&quot;WHOIS&quot;</span>, origin, parameters );
+<a name="l00181"></a>00181                 slotIrcEvent( <span class="stringliteral">&quot;WHOIS&quot;</span>, origin, parameters );
 <a name="l00182"></a>00182                 whois_identified_ = <span class="keyword">false</span>;
 <a name="l00183"></a>00183                 in_whois_for_.clear();
 <a name="l00184"></a>00184         }
 <a name="l00185"></a>00185         <span class="comment">// part of NAMES</span>
 <a name="l00186"></a>00186         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(code == 353)
 <a name="l00187"></a>00187         {
-<a name="l00188"></a>00188                 std::vector&lt;std::string&gt; <a class="code" href="class_server.html#ac1b87b89d65c72e11acb3e7a521de9a1">names</a>;
+<a name="l00188"></a>00188                 std::vector&lt;std::string&gt; names;
 <a name="l00189"></a>00189                 std::stringstream ss(args.back());
 <a name="l00190"></a>00190                 std::string name;
 <a name="l00191"></a>00191                 <span class="keywordflow">while</span>(std::getline(ss, name, <span class="charliteral">&#39; &#39;</span>)) {
@@ -276,7 +277,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00201"></a>00201                 <span class="keywordflow">for</span>(it = in_names_.begin(); it != in_names_.end(); ++it) {
 <a name="l00202"></a>00202                         parameters.push_back(*it);
 <a name="l00203"></a>00203                 }
-<a name="l00204"></a>00204                 <a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">slotIrcEvent</a>( <span class="stringliteral">&quot;NAMES&quot;</span>, origin, parameters );
+<a name="l00204"></a>00204                 slotIrcEvent( <span class="stringliteral">&quot;NAMES&quot;</span>, origin, parameters );
 <a name="l00205"></a>00205                 in_names_.clear();
 <a name="l00206"></a>00206         }
 <a name="l00207"></a>00207         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(code == 332)
@@ -284,7 +285,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00209"></a>00209                 std::vector&lt;std::string&gt; parameters;
 <a name="l00210"></a>00210                 parameters.push_back(args.at(1));
 <a name="l00211"></a>00211                 parameters.push_back(args.at(2));
-<a name="l00212"></a>00212                 <a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">slotIrcEvent</a>( <span class="stringliteral">&quot;TOPIC&quot;</span>, origin, parameters );
+<a name="l00212"></a>00212                 slotIrcEvent( <span class="stringliteral">&quot;TOPIC&quot;</span>, origin, parameters );
 <a name="l00213"></a>00213         }
 <a name="l00214"></a>00214         std::stringstream codestream;
 <a name="l00215"></a>00215         codestream &lt;&lt; code;
@@ -294,34 +295,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00219"></a>00219         <span class="keywordflow">for</span>(it = args.begin(); it != args.end(); ++it) {
 <a name="l00220"></a>00220                 params.push_back(*it);
 <a name="l00221"></a>00221         }
-<a name="l00222"></a>00222         <a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">slotIrcEvent</a>( <span class="stringliteral">&quot;NUMERIC&quot;</span>, origin, params );
+<a name="l00222"></a>00222         slotIrcEvent( <span class="stringliteral">&quot;NUMERIC&quot;</span>, origin, params );
 <a name="l00223"></a>00223 }
 <a name="l00224"></a>00224 
-<a name="l00225"></a><a class="code" href="class_server.html#ab117f10814193e5ba1306fa7a7ebf776">00225</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#ab117f10814193e5ba1306fa7a7ebf776">Server::slotDisconnected</a>()
+<a name="l00225"></a><a class="code" href="classdazeus_1_1_server.html#a18077ec5fc00dcabf4a8a1803a82dce7">00225</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a18077ec5fc00dcabf4a8a1803a82dce7">dazeus::Server::slotDisconnected</a>()
 <a name="l00226"></a>00226 {
 <a name="l00227"></a>00227         network_-&gt;onFailedConnection();
 <a name="l00228"></a>00228 }
 <a name="l00229"></a>00229 
-<a name="l00230"></a><a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">00230</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">Server::slotIrcEvent</a>(<span class="keyword">const</span> std::string &amp;event, <span class="keyword">const</span> std::string &amp;origin, <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;args)
+<a name="l00230"></a><a class="code" href="classdazeus_1_1_server.html#a0c24d316968f0bad12e291c9d171f5af">00230</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a0c24d316968f0bad12e291c9d171f5af">dazeus::Server::slotIrcEvent</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="structdazeus__struct.html#a3f4cb448c2cdc11e86d59aa4b7c1a97b">event</a>, <span class="keyword">const</span> std::string &amp;origin, <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;args)
 <a name="l00231"></a>00231 {
 <a name="l00232"></a>00232         assert(network_ != 0);
-<a name="l00233"></a>00233         assert(network_-&gt;<a class="code" href="class_network.html#a5d3efaf3ed3b73fa85ce72ed71699064">activeServer</a>() == <span class="keyword">this</span>);
+<a name="l00233"></a>00233         assert(network_-&gt;activeServer() == <span class="keyword">this</span>);
 <a name="l00234"></a>00234         network_-&gt;slotIrcEvent(event, origin, args);
 <a name="l00235"></a>00235 }
 <a name="l00236"></a>00236 
-<a name="l00237"></a><a class="code" href="server_8cpp.html#ae4a72c2bbab84c26a527b93c0e31e685">00237</a> <span class="keywordtype">void</span> <a class="code" href="server_8cpp.html#ae4a72c2bbab84c26a527b93c0e31e685">irc_eventcode_callback</a>(irc_session_t *s, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event, <span class="keyword">const</span> <span class="keywordtype">char</span> *origin, <span class="keyword">const</span> <span class="keywordtype">char</span> **p, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count) {
-<a name="l00238"></a>00238         <a class="code" href="class_server.html">Server</a> *server = (<a class="code" href="class_server.html">Server</a>*) irc_get_ctx(s);
+<a name="l00237"></a><a class="code" href="server_8cpp.html#ae4a72c2bbab84c26a527b93c0e31e685">00237</a> <span class="keywordtype">void</span> <a class="code" href="server_8cpp.html#ae4a72c2bbab84c26a527b93c0e31e685">irc_eventcode_callback</a>(irc_session_t *s, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structdazeus__struct.html#a3f4cb448c2cdc11e86d59aa4b7c1a97b">event</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *origin, <span class="keyword">const</span> <span class="keywordtype">char</span> **p, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count) {
+<a name="l00238"></a>00238         dazeus::Server *server = (dazeus::Server*) irc_get_ctx(s);
 <a name="l00239"></a>00239         std::vector&lt;std::string&gt; params;
 <a name="l00240"></a>00240         <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; count; ++i) {
 <a name="l00241"></a>00241                 params.push_back(std::string(p[i]));
 <a name="l00242"></a>00242         }
-<a name="l00243"></a>00243         server-&gt;<a class="code" href="class_server.html#abe96e58528adbcc55d5ae9d12941ac12">slotNumericMessageReceived</a>(std::string(origin), event, params);
+<a name="l00243"></a>00243         server-&gt;slotNumericMessageReceived(std::string(origin), event, params);
 <a name="l00244"></a>00244 }
 <a name="l00245"></a>00245 
 <a name="l00246"></a><a class="code" href="server_8cpp.html#a66e5f545ef7828896279ac53a485db7d">00246</a> <span class="keywordtype">void</span> <a class="code" href="server_8cpp.html#a66e5f545ef7828896279ac53a485db7d">irc_callback</a>(irc_session_t *s, <span class="keyword">const</span> <span class="keywordtype">char</span> *e, <span class="keyword">const</span> <span class="keywordtype">char</span> *o, <span class="keyword">const</span> <span class="keywordtype">char</span> **params, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count) {
-<a name="l00247"></a>00247         <a class="code" href="class_server.html">Server</a> *server = (<a class="code" href="class_server.html">Server</a>*) irc_get_ctx(s);
+<a name="l00247"></a>00247         dazeus::Server *server = (dazeus::Server*) irc_get_ctx(s);
 <a name="l00248"></a>00248 
-<a name="l00249"></a>00249         std::string event(e);
+<a name="l00249"></a>00249         std::string <a class="code" href="structdazeus__struct.html#a3f4cb448c2cdc11e86d59aa4b7c1a97b">event</a>(e);
 <a name="l00250"></a>00250         <span class="comment">// From libircclient docs, but CHANNEL_* is bullshit...</span>
 <a name="l00251"></a>00251         <span class="keywordflow">if</span>(event == <span class="stringliteral">&quot;CHANNEL_NOTICE&quot;</span>) {
 <a name="l00252"></a>00252                 <span class="keyword">event</span> = <span class="stringliteral">&quot;NOTICE&quot;</span>;
@@ -344,24 +345,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00269"></a>00269         }
 <a name="l00270"></a>00270 
 <a name="l00271"></a>00271 <span class="preprocessor">#ifdef DEBUG</span>
-<a name="l00272"></a>00272 <span class="preprocessor"></span>        fprintf(stderr, <span class="stringliteral">&quot;%s - %s from %s\n&quot;</span>, <a class="code" href="class_server.html#ad34ae67094cd96376f1ccda885d63d51">Server::toString</a>(server).c_str(), event.c_str(), origin.c_str());
+<a name="l00272"></a>00272 <span class="preprocessor"></span>        fprintf(stderr, <span class="stringliteral">&quot;%s - %s from %s\n&quot;</span>, dazeus::Server::toString(server).c_str(), event.c_str(), origin.c_str());
 <a name="l00273"></a>00273 <span class="preprocessor">#endif</span>
 <a name="l00274"></a>00274 <span class="preprocessor"></span>
 <a name="l00275"></a>00275         <span class="comment">// TODO: handle disconnects nicely (probably using some ping and LIBIRC_ERR_CLOSED</span>
 <a name="l00276"></a>00276         <span class="keywordflow">if</span>(event == <span class="stringliteral">&quot;ERROR&quot;</span>) {
 <a name="l00277"></a>00277                 fprintf(stderr, <span class="stringliteral">&quot;Error received from libircclient; origin=%s.\n&quot;</span>, origin.c_str());
-<a name="l00278"></a>00278                 server-&gt;<a class="code" href="class_server.html#ab117f10814193e5ba1306fa7a7ebf776">slotDisconnected</a>();
+<a name="l00278"></a>00278                 server-&gt;slotDisconnected();
 <a name="l00279"></a>00279         } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(event == <span class="stringliteral">&quot;CONNECT&quot;</span>) {
-<a name="l00280"></a>00280                 printf(<span class="stringliteral">&quot;Connected to server: %s\n&quot;</span>, <a class="code" href="class_server.html#ad34ae67094cd96376f1ccda885d63d51">Server::toString</a>(server).c_str());
+<a name="l00280"></a>00280                 printf(<span class="stringliteral">&quot;Connected to server: %s\n&quot;</span>, dazeus::Server::toString(server).c_str());
 <a name="l00281"></a>00281         }
 <a name="l00282"></a>00282 
-<a name="l00283"></a>00283         server-&gt;<a class="code" href="class_server.html#a31428401fe24c6b2b608fed51f9ba4ca">slotIrcEvent</a>(event, origin, arguments);
+<a name="l00283"></a>00283         server-&gt;slotIrcEvent(event, origin, arguments);
 <a name="l00284"></a>00284 }
 <a name="l00285"></a>00285 
-<a name="l00286"></a><a class="code" href="class_server.html#ac356e330b766a56f6ed51b5fb18f86e3">00286</a> <span class="keywordtype">void</span> <a class="code" href="class_server.html#ac356e330b766a56f6ed51b5fb18f86e3">Server::connectToServer</a>()
+<a name="l00286"></a><a class="code" href="classdazeus_1_1_server.html#a9f82aa4f620e581e4c74c2f9672571f7">00286</a> <span class="keywordtype">void</span> <a class="code" href="classdazeus_1_1_server.html#a9f82aa4f620e581e4c74c2f9672571f7">dazeus::Server::connectToServer</a>()
 <a name="l00287"></a>00287 {
-<a name="l00288"></a>00288         printf(<span class="stringliteral">&quot;Connecting to server: %s\n&quot;</span>, <a class="code" href="class_server.html#ad34ae67094cd96376f1ccda885d63d51">toString</a>(<span class="keyword">this</span>).c_str());
-<a name="l00289"></a>00289         assert( !config_-&gt;<a class="code" href="struct_server_config.html#a100c22b0228ca3c79e8dad862b13514b">network</a>-&gt;<a class="code" href="struct_network_config.html#a35ea552a86aab8301f45ad2aa137cef1">nickName</a>.length() == 0 );
+<a name="l00288"></a>00288         printf(<span class="stringliteral">&quot;Connecting to server: %s\n&quot;</span>, toString(<span class="keyword">this</span>).c_str());
+<a name="l00289"></a>00289         assert( !config_-&gt;network-&gt;nickName.length() == 0 );
 <a name="l00290"></a>00290 
 <a name="l00291"></a>00291         irc_callbacks_t callbacks;
 <a name="l00292"></a>00292         memset(&amp;callbacks, 0, <span class="keyword">sizeof</span>(irc_callbacks_t));
@@ -394,20 +395,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00319"></a>00319         }
 <a name="l00320"></a>00320         irc_set_ctx(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, <span class="keyword">this</span>);
 <a name="l00321"></a>00321 
-<a name="l00322"></a>00322         assert( config_-&gt;<a class="code" href="struct_server_config.html#a100c22b0228ca3c79e8dad862b13514b">network</a>-&gt;<a class="code" href="struct_network_config.html#a35ea552a86aab8301f45ad2aa137cef1">nickName</a>.length() != 0 );
-<a name="l00323"></a>00323         irc_connect(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, config_-&gt;<a class="code" href="struct_server_config.html#aea03a861d1838d4a9e51c0944c0ed4aa">host</a>.c_str(),
-<a name="l00324"></a>00324                 config_-&gt;<a class="code" href="struct_server_config.html#ab49ab0a1fa996da2794a5a8003386702">port</a>,
-<a name="l00325"></a>00325                 config_-&gt;<a class="code" href="struct_server_config.html#a100c22b0228ca3c79e8dad862b13514b">network</a>-&gt;<a class="code" href="struct_network_config.html#a6458de72433fccec460a3bfe35beb2ce">password</a>.c_str(),
-<a name="l00326"></a>00326                 config_-&gt;<a class="code" href="struct_server_config.html#a100c22b0228ca3c79e8dad862b13514b">network</a>-&gt;<a class="code" href="struct_network_config.html#a35ea552a86aab8301f45ad2aa137cef1">nickName</a>.c_str(),
-<a name="l00327"></a>00327                 config_-&gt;<a class="code" href="struct_server_config.html#a100c22b0228ca3c79e8dad862b13514b">network</a>-&gt;<a class="code" href="struct_network_config.html#af72729912141a604d2236185efc6ad58">userName</a>.c_str(),
-<a name="l00328"></a>00328                 config_-&gt;<a class="code" href="struct_server_config.html#a100c22b0228ca3c79e8dad862b13514b">network</a>-&gt;<a class="code" href="struct_network_config.html#a9ea6ad4788ab6c65e86bbfd42a49f102">fullName</a>.c_str());
+<a name="l00322"></a>00322         assert( config_-&gt;network-&gt;nickName.length() != 0 );
+<a name="l00323"></a>00323         irc_connect(<a class="code" href="server_8cpp.html#a3df87df601ded076d7ee57e7200f6ad2">IRC</a>, config_-&gt;host.c_str(),
+<a name="l00324"></a>00324                 config_-&gt;port,
+<a name="l00325"></a>00325                 config_-&gt;network-&gt;password.c_str(),
+<a name="l00326"></a>00326                 config_-&gt;network-&gt;nickName.c_str(),
+<a name="l00327"></a>00327                 config_-&gt;network-&gt;userName.c_str(),
+<a name="l00328"></a>00328                 config_-&gt;network-&gt;fullName.c_str());
 <a name="l00329"></a>00329 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="server_8cpp.html">server.cpp</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -417,7 +418,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

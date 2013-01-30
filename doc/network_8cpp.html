@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -80,6 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Defines</a>  </div>
   <div class="headertitle">
 <div class="title">network.cpp File Reference</div>  </div>
@@ -87,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="network_8h_source.html">network.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="server_8h_source.html">server.h</a>&quot;</code><br/>
-<code>#include &quot;utils.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
 <code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;sys/select.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
@@ -95,15 +97,21 @@ Include dependency graph for network.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="network_8cpp__incl.png" border="0" usemap="#contrib_2libdazeus-irc_2src_2network_8cpp" alt=""/></div>
 <map name="contrib_2libdazeus-irc_2src_2network_8cpp" id="contrib_2libdazeus-irc_2src_2network_8cpp">
-<area shape="rect" id="node3" href="network_8h.html" title="network.h" alt="" coords="335,161,412,189"/><area shape="rect" id="node13" href="server_8h.html" title="server.h" alt="" coords="152,83,221,111"/></map>
+<area shape="rect" id="node3" href="network_8h.html" title="network.h" alt="" coords="289,161,367,189"/><area shape="rect" id="node13" href="server_8h.html" title="server.h" alt="" coords="432,83,501,111"/><area shape="rect" id="node24" href="utils_8h.html" title="utils.h" alt="" coords="159,161,215,189"/></map>
 </div>
 </div>
 <p><a href="network_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_server_sorter.html">ServerSorter</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Chooses one server or the other based on the priority and failure rate. Failure rate is recorded in the <a class="el" href="class_network.html">Network</a> object that the <a class="el" href="struct_server_config.html">ServerConfig</a> object links to via the <a class="el" href="struct_network_config.html">NetworkConfig</a>, if there is such a <a class="el" href="struct_network_config.html">NetworkConfig</a> object. You must give two servers of the same <a class="el" href="class_network.html">Network</a>.  <a href="struct_server_sorter.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdazeus_1_1_server_sorter.html">dazeus::ServerSorter</a></td></tr>
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedazeus.html">dazeus</a></td></tr>
+
+<p><tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Chooses one server or the other based on the priority and failure rate. Failure rate is recorded in the <a class="el" href="classdazeus_1_1_network.html">Network</a> object that the <a class="el" href="structdazeus_1_1_server_config.html">ServerConfig</a> object links to via the <a class="el" href="structdazeus_1_1_network_config.html">NetworkConfig</a>, if there is such a <a class="el" href="structdazeus_1_1_network_config.html">NetworkConfig</a> object. You must give two servers of the same <a class="el" href="classdazeus_1_1_network.html">Network</a>. </p>
+<br/></td></tr>
+</p>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network_8cpp.html#aa577c474a0d4b6d46c942f7c4a46aa47">MIN</a>(a)&#160;&#160;&#160;if(params.size() &lt; a) { fprintf(stderr, &quot;Too few parameters for event %s\n&quot;, event.c_str()); return; }</td></tr>
@@ -131,7 +139,7 @@ Defines</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="network_8cpp.html">network.cpp</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -141,7 +149,7 @@ Defines</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

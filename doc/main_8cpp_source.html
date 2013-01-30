@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -125,14 +126,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00045"></a>00045                 }
 <a name="l00046"></a>00046         }
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048         <a class="code" href="class_da_zeus.html">DaZeus</a> d(configfile);
-<a name="l00049"></a>00049         <span class="keywordflow">if</span>(!d.<a class="code" href="class_da_zeus.html#a02cbe808b95e88647f6b55a71138b9c7" title="(Re-)loads configuration from the configuration file.">loadConfig</a>()) {
+<a name="l00048"></a>00048         dazeus::DaZeus d(configfile);
+<a name="l00049"></a>00049         <span class="keywordflow">if</span>(!d.loadConfig()) {
 <a name="l00050"></a>00050                 fprintf(stderr, <span class="stringliteral">&quot;Failed to load configuration, bailing out.\n&quot;</span>);
 <a name="l00051"></a>00051                 <span class="keywordflow">return</span> 3;
 <a name="l00052"></a>00052         }
-<a name="l00053"></a>00053         d.<a class="code" href="class_da_zeus.html#a6a58452e58f64583339530aae510233a" title="Initialises plugins from the configuration file.">initPlugins</a>();
-<a name="l00054"></a>00054         d.<a class="code" href="class_da_zeus.html#a35a292602216e4549601aabd368767ac" title="Connect to all networks marked &quot;autoconnect&quot;.">autoConnect</a>();
-<a name="l00055"></a>00055         d.<a class="code" href="class_da_zeus.html#ad23c15f466bbd71819d595ef090ed7b4">run</a>();
+<a name="l00053"></a>00053         d.initPlugins();
+<a name="l00054"></a>00054         d.autoConnect();
+<a name="l00055"></a>00055         d.run();
 <a name="l00056"></a>00056         <span class="keywordflow">return</span> 0;
 <a name="l00057"></a>00057 }
 <a name="l00058"></a>00058 
@@ -148,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -158,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

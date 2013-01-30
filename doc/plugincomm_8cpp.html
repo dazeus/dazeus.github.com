@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -85,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br/>
-<code>#include &lt;libjson.h&gt;</code><br/>
+<code>#include &lt;jansson.h&gt;</code><br/>
 <code>#include &lt;sys/types.h&gt;</code><br/>
 <code>#include &lt;sys/socket.h&gt;</code><br/>
 <code>#include &lt;sys/un.h&gt;</code><br/>
@@ -111,13 +112,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="server_8h_source.html">server.h</a>&quot;</code><br/>
 <code>#include &quot;dazeus.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="database_8h_source.html">database.h</a>&quot;</code><br/>
-<code>#include &quot;utils.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for plugincomm.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="plugincomm_8cpp__incl.png" border="0" usemap="#src_2plugincomm_8cpp" alt=""/></div>
 <map name="src_2plugincomm_8cpp" id="src_2plugincomm_8cpp">
-<area shape="rect" id="node45" href="plugincomm_8h.html" title="plugincomm.h" alt="" coords="1101,83,1205,111"/><area shape="rect" id="node60" href="network_8h.html" title="network.h" alt="" coords="1562,161,1640,189"/><area shape="rect" id="node68" href="config_8h.html" title="config.h" alt="" coords="2069,83,2136,111"/><area shape="rect" id="node71" href="database_8h.html" title="database.h" alt="" coords="2000,161,2085,189"/><area shape="rect" id="node80" href="server_8h.html" title="server.h" alt="" coords="1766,83,1836,111"/></map>
+<area shape="rect" id="node45" href="plugincomm_8h.html" title="plugincomm.h" alt="" coords="1056,83,1160,111"/><area shape="rect" id="node56" href="utils_8h.html" title="utils.h" alt="" coords="824,161,880,189"/><area shape="rect" id="node67" href="network_8h.html" title="network.h" alt="" coords="672,161,750,189"/><area shape="rect" id="node74" href="config_8h.html" title="config.h" alt="" coords="134,83,200,111"/><area shape="rect" id="node77" href="database_8h.html" title="database.h" alt="" coords="176,161,262,189"/><area shape="rect" id="node86" href="server_8h.html" title="server.h" alt="" coords="462,83,531,111"/></map>
 </div>
 </div>
 <p><a href="plugincomm_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -186,7 +187,7 @@ Defines</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="plugincomm_8cpp.html">plugincomm.cpp</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -196,7 +197,7 @@ Defines</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

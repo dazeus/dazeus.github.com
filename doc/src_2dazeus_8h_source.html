@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -89,48 +90,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00009"></a>00009 <span class="preprocessor">#include &lt;vector&gt;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">class </span><a class="code" href="class_config_reader.html">ConfigReader</a>;
-<a name="l00013"></a>00013 <span class="keyword">class </span><a class="code" href="class_plugin_comm.html">PluginComm</a>;
-<a name="l00014"></a>00014 <span class="keyword">class </span><a class="code" href="class_network.html">Network</a>;
-<a name="l00015"></a>00015 <span class="keyword">class </span><a class="code" href="class_database.html" title="A database frontend.">Database</a>;
-<a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="class_da_zeus.html">00017</a> <span class="keyword">class </span><a class="code" href="class_da_zeus.html">DaZeus</a>
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019   <span class="keyword">public</span>:
-<a name="l00020"></a>00020              <a class="code" href="class_da_zeus.html#a345051d70e4cc682f443557c9473debb">DaZeus</a>( std::string <a class="code" href="class_da_zeus.html#a4bedbdda5da9b1b24a68ba2f2478580a">configFileName</a> = std::string() );
-<a name="l00021"></a>00021             <a class="code" href="class_da_zeus.html#a8c894df795bc95cf5c0a2b3b7b6f7e36" title="Destructor.">~DaZeus</a>();
-<a name="l00022"></a>00022     <span class="keywordtype">void</span>     <a class="code" href="class_da_zeus.html#ac1deb3273a9ff80f8379b40b3ef57dd4">setConfigFileName</a>( std::string fileName );
-<a name="l00023"></a>00023     std::string <a class="code" href="class_da_zeus.html#a4bedbdda5da9b1b24a68ba2f2478580a">configFileName</a>() <span class="keyword">const</span>;
-<a name="l00024"></a>00024     <span class="keywordtype">bool</span>     <a class="code" href="class_da_zeus.html#a183df6a9c5d87b56c52b9b596d1200d5" title="Returns whether the configuration is loaded.">configLoaded</a>() <span class="keyword">const</span>;
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026     <a class="code" href="class_database.html" title="A database frontend.">Database</a> *<a class="code" href="class_da_zeus.html#a0dc8d8d13c9a75adb5af3085bbb24e91" title="Return the database.">database</a>() <span class="keyword">const</span>;
-<a name="l00027"></a><a class="code" href="class_da_zeus.html#a6e0bdf85f945686a0fe0583f1fac4f8a">00027</a>     <span class="keyword">const</span> std::vector&lt;Network*&gt; &amp;<a class="code" href="class_da_zeus.html#a6e0bdf85f945686a0fe0583f1fac4f8a">networks</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> networks_; }
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029     <span class="keywordtype">void</span>     <a class="code" href="class_da_zeus.html#ad23c15f466bbd71819d595ef090ed7b4">run</a>();
-<a name="l00030"></a>00030     <span class="keywordtype">bool</span>     <a class="code" href="class_da_zeus.html#a02cbe808b95e88647f6b55a71138b9c7" title="(Re-)loads configuration from the configuration file.">loadConfig</a>();
-<a name="l00031"></a>00031     <span class="keywordtype">bool</span>     <a class="code" href="class_da_zeus.html#a6a58452e58f64583339530aae510233a" title="Initialises plugins from the configuration file.">initPlugins</a>();
-<a name="l00032"></a>00032     <span class="keywordtype">void</span>     <a class="code" href="class_da_zeus.html#a35a292602216e4549601aabd368767ac" title="Connect to all networks marked &quot;autoconnect&quot;.">autoConnect</a>();
-<a name="l00033"></a>00033     <span class="keywordtype">bool</span>     <a class="code" href="class_da_zeus.html#ab0526b3c2ae1e16c01082714cf8eac8b" title="Start connecting to the database.">connectDatabase</a>();
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035   <span class="keyword">private</span>:
-<a name="l00036"></a>00036     <span class="comment">// explicitly disable copy constructor</span>
-<a name="l00037"></a>00037     <a class="code" href="class_da_zeus.html#a345051d70e4cc682f443557c9473debb">DaZeus</a>(<span class="keyword">const</span> <a class="code" href="class_da_zeus.html">DaZeus</a>&amp;);
-<a name="l00038"></a>00038     <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="class_da_zeus.html">DaZeus</a>&amp;);
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040     <a class="code" href="class_config_reader.html">ConfigReader</a>    *config_;
-<a name="l00041"></a>00041     std::string      configFileName_;
-<a name="l00042"></a>00042     <a class="code" href="class_plugin_comm.html">PluginComm</a>      *plugins_;
-<a name="l00043"></a>00043     <a class="code" href="class_database.html" title="A database frontend.">Database</a>        *database_;
-<a name="l00044"></a>00044     std::vector&lt;Network*&gt;  networks_;
-<a name="l00045"></a>00045 };
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="preprocessor">#endif</span>
+<a name="l00012"></a>00012 <span class="keyword">namespace </span><a class="code" href="structdazeus__struct.html">dazeus</a> {
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">class </span>ConfigReader;
+<a name="l00015"></a>00015 <span class="keyword">class </span>PluginComm;
+<a name="l00016"></a>00016 <span class="keyword">class </span>Network;
+<a name="l00017"></a>00017 <span class="keyword">class </span>Database;
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="classdazeus_1_1_da_zeus.html">00019</a> <span class="keyword">class </span><a class="code" href="classdazeus_1_1_da_zeus.html">DaZeus</a>
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021   <span class="keyword">public</span>:
+<a name="l00022"></a>00022              <a class="code" href="classdazeus_1_1_da_zeus.html">DaZeus</a>( std::string <a class="code" href="classdazeus_1_1_da_zeus.html#a4bedbdda5da9b1b24a68ba2f2478580a">configFileName</a> = std::string() );
+<a name="l00023"></a>00023             ~<a class="code" href="classdazeus_1_1_da_zeus.html">DaZeus</a>();
+<a name="l00024"></a>00024     <span class="keywordtype">void</span>     <a class="code" href="classdazeus_1_1_da_zeus.html#ac1deb3273a9ff80f8379b40b3ef57dd4">setConfigFileName</a>( std::string fileName );
+<a name="l00025"></a>00025     std::string <a class="code" href="classdazeus_1_1_da_zeus.html#a4bedbdda5da9b1b24a68ba2f2478580a">configFileName</a>() <span class="keyword">const</span>;
+<a name="l00026"></a>00026     <span class="keywordtype">bool</span>     <a class="code" href="classdazeus_1_1_da_zeus.html#a183df6a9c5d87b56c52b9b596d1200d5" title="Returns whether the configuration is loaded.">configLoaded</a>() <span class="keyword">const</span>;
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028     <a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a> *<a class="code" href="classdazeus_1_1_da_zeus.html#ac427e6888af3ca62f1f5f4bea4cfa6e4" title="Return the database.">database</a>() <span class="keyword">const</span>;
+<a name="l00029"></a><a class="code" href="classdazeus_1_1_da_zeus.html#a4b77701799a658430b72f86516a51b5e">00029</a>     <span class="keyword">const</span> std::vector&lt;Network*&gt; &amp;<a class="code" href="classdazeus_1_1_da_zeus.html#a4b77701799a658430b72f86516a51b5e">networks</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> networks_; }
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031     <span class="keywordtype">void</span>     run();
+<a name="l00032"></a>00032     <span class="keywordtype">bool</span>     loadConfig();
+<a name="l00033"></a>00033     <span class="keywordtype">bool</span>     initPlugins();
+<a name="l00034"></a>00034     <span class="keywordtype">void</span>     autoConnect();
+<a name="l00035"></a>00035     <span class="keywordtype">bool</span>     connectDatabase();
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037   <span class="keyword">private</span>:
+<a name="l00038"></a>00038     <span class="comment">// explicitly disable copy constructor</span>
+<a name="l00039"></a>00039     <a class="code" href="classdazeus_1_1_da_zeus.html">DaZeus</a>(<span class="keyword">const</span> <a class="code" href="classdazeus_1_1_da_zeus.html">DaZeus</a>&amp;);
+<a name="l00040"></a>00040     <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classdazeus_1_1_da_zeus.html">DaZeus</a>&amp;);
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042     <a class="code" href="classdazeus_1_1_config_reader.html">ConfigReader</a>    *config_;
+<a name="l00043"></a>00043     std::string      configFileName_;
+<a name="l00044"></a>00044     <a class="code" href="classdazeus_1_1_plugin_comm.html">PluginComm</a>      *plugins_;
+<a name="l00045"></a>00045     <a class="code" href="classdazeus_1_1_database.html" title="A database frontend.">Database</a>        *database_;
+<a name="l00046"></a>00046     std::vector&lt;Network*&gt;  networks_;
+<a name="l00047"></a>00047 };
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="src_2dazeus_8h.html">dazeus.h</a>      </li>
-      <li class="footer">Generated on Wed Jan 30 2013 04:30:24 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -140,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

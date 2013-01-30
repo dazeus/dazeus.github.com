@@ -6,69 +6,73 @@ var NAVTREE =
       [ "DaZeus 2 Plugin Protocol", "pluginprotocoldocs.html", null ]
     ] ],
     [ "Class List", "annotated.html", [
-      [ "ConfigReader", "class_config_reader.html", null ],
-      [ "ConfigReaderState", "struct_config_reader_state.html", null ],
-      [ "Database", "class_database.html", null ],
-      [ "DatabaseConfig", "struct_database_config.html", null ],
+      [ "dazeus::ConfigReader", "classdazeus_1_1_config_reader.html", null ],
+      [ "dazeus::ConfigReaderState", "structdazeus_1_1_config_reader_state.html", null ],
+      [ "dazeus::Database", "classdazeus_1_1_database.html", null ],
+      [ "dazeus::DatabaseConfig", "structdazeus_1_1_database_config.html", null ],
       [ "DaZeus", "class_da_zeus.html", null ],
+      [ "dazeus::DaZeus", "classdazeus_1_1_da_zeus.html", null ],
       [ "dazeus_event_struct", "structdazeus__event__struct.html", null ],
       [ "dazeus_scope_struct", "structdazeus__scope__struct.html", null ],
       [ "dazeus_stringlist_struct", "structdazeus__stringlist__struct.html", null ],
       [ "dazeus_struct", "structdazeus__struct.html", null ],
       [ "DaZeus::Event", "struct_da_zeus_1_1_event.html", null ],
-      [ "ConfigReader::exception", "struct_config_reader_1_1exception.html", null ],
-      [ "GlobalConfig", "struct_global_config.html", null ],
-      [ "Network", "class_network.html", null ],
-      [ "NetworkConfig", "struct_network_config.html", null ],
-      [ "NetworkListener", "class_network_listener.html", null ],
-      [ "PluginComm", "class_plugin_comm.html", null ],
-      [ "PluginConfig", "struct_plugin_config.html", null ],
+      [ "dazeus::ConfigReader::exception", "structdazeus_1_1_config_reader_1_1exception.html", null ],
+      [ "dazeus::GlobalConfig", "structdazeus_1_1_global_config.html", null ],
+      [ "dazeus::Network", "classdazeus_1_1_network.html", null ],
+      [ "dazeus::NetworkConfig", "structdazeus_1_1_network_config.html", null ],
+      [ "dazeus::NetworkListener", "classdazeus_1_1_network_listener.html", null ],
+      [ "dazeus::PluginComm", "classdazeus_1_1_plugin_comm.html", null ],
+      [ "dazeus::PluginConfig", "structdazeus_1_1_plugin_config.html", null ],
       [ "DaZeus::Scope", "struct_da_zeus_1_1_scope.html", null ],
-      [ "Server", "class_server.html", null ],
-      [ "ServerConfig", "struct_server_config.html", null ],
-      [ "ServerSorter", "struct_server_sorter.html", null ],
-      [ "SocketConfig", "struct_socket_config.html", null ],
-      [ "utf8_encoding_error", "structutf8__encoding__error.html", null ]
+      [ "dazeus::Server", "classdazeus_1_1_server.html", null ],
+      [ "dazeus::ServerConfig", "structdazeus_1_1_server_config.html", null ],
+      [ "dazeus::ServerSorter", "structdazeus_1_1_server_sorter.html", null ],
+      [ "dazeus::SocketConfig", "structdazeus_1_1_socket_config.html", null ]
     ] ],
     [ "Class Index", "classes.html", null ],
     [ "Class Hierarchy", "hierarchy.html", [
-      [ "ConfigReader", "class_config_reader.html", null ],
-      [ "ConfigReaderState", "struct_config_reader_state.html", null ],
-      [ "Database", "class_database.html", null ],
-      [ "DatabaseConfig", "struct_database_config.html", null ],
+      [ "dazeus::ConfigReader", "classdazeus_1_1_config_reader.html", null ],
+      [ "dazeus::ConfigReaderState", "structdazeus_1_1_config_reader_state.html", null ],
+      [ "dazeus::Database", "classdazeus_1_1_database.html", null ],
+      [ "dazeus::DatabaseConfig", "structdazeus_1_1_database_config.html", null ],
       [ "DaZeus", "class_da_zeus.html", null ],
+      [ "dazeus::DaZeus", "classdazeus_1_1_da_zeus.html", null ],
       [ "dazeus_event_struct", "structdazeus__event__struct.html", null ],
       [ "dazeus_scope_struct", "structdazeus__scope__struct.html", null ],
       [ "dazeus_stringlist_struct", "structdazeus__stringlist__struct.html", null ],
       [ "dazeus_struct", "structdazeus__struct.html", null ],
       [ "DaZeus::Event", "struct_da_zeus_1_1_event.html", null ],
-      [ "ConfigReader::exception", "struct_config_reader_1_1exception.html", null ],
-      [ "GlobalConfig", "struct_global_config.html", null ],
-      [ "Network", "class_network.html", null ],
-      [ "NetworkConfig", "struct_network_config.html", null ],
-      [ "NetworkListener", "class_network_listener.html", [
-        [ "PluginComm", "class_plugin_comm.html", null ]
+      [ "dazeus::ConfigReader::exception", "structdazeus_1_1_config_reader_1_1exception.html", null ],
+      [ "dazeus::GlobalConfig", "structdazeus_1_1_global_config.html", null ],
+      [ "dazeus::Network", "classdazeus_1_1_network.html", null ],
+      [ "dazeus::NetworkConfig", "structdazeus_1_1_network_config.html", null ],
+      [ "dazeus::NetworkListener", "classdazeus_1_1_network_listener.html", [
+        [ "dazeus::PluginComm", "classdazeus_1_1_plugin_comm.html", null ]
       ] ],
-      [ "PluginConfig", "struct_plugin_config.html", null ],
+      [ "dazeus::PluginConfig", "structdazeus_1_1_plugin_config.html", null ],
       [ "DaZeus::Scope", "struct_da_zeus_1_1_scope.html", null ],
-      [ "Server", "class_server.html", null ],
-      [ "ServerConfig", "struct_server_config.html", null ],
-      [ "ServerSorter", "struct_server_sorter.html", null ],
-      [ "SocketConfig", "struct_socket_config.html", null ],
-      [ "utf8_encoding_error", "structutf8__encoding__error.html", null ]
+      [ "dazeus::Server", "classdazeus_1_1_server.html", null ],
+      [ "dazeus::ServerConfig", "structdazeus_1_1_server_config.html", null ],
+      [ "dazeus::ServerSorter", "structdazeus_1_1_server_sorter.html", null ],
+      [ "dazeus::SocketConfig", "structdazeus_1_1_socket_config.html", null ]
     ] ],
     [ "Class Members", "functions.html", null ],
+    [ "Namespace List", "namespaces.html", [
+      [ "dazeus", "namespacedazeus.html", null ]
+    ] ],
     [ "File List", "files.html", [
       [ "bindings/libdazeus-qt/dazeus.cpp", "bindings_2libdazeus-qt_2dazeus_8cpp.html", null ],
       [ "bindings/libdazeus-qt/dazeus.h", "bindings_2libdazeus-qt_2dazeus_8h.html", null ],
       [ "bindings/libdazeus/include/libdazeus.h", "libdazeus_8h.html", null ],
       [ "bindings/libdazeus/src/libdazeus.c", "libdazeus_8c.html", null ],
+      [ "bindings/perl/lib/DaZeus.pm", "_da_zeus_8pm.html", null ],
       [ "contrib/libdazeus-irc/src/network.cpp", "network_8cpp.html", null ],
       [ "contrib/libdazeus-irc/src/network.h", "network_8h.html", null ],
       [ "contrib/libdazeus-irc/src/server.cpp", "server_8cpp.html", null ],
       [ "contrib/libdazeus-irc/src/server.h", "server_8h.html", null ],
-      [ "contrib/libdazeus-irc/src/utils.cpp", "contrib_2libdazeus-irc_2src_2utils_8cpp.html", null ],
-      [ "contrib/libdazeus-irc/src/utils.h", "contrib_2libdazeus-irc_2src_2utils_8h.html", null ],
+      [ "contrib/libdazeus-irc/src/utils.cpp", "utils_8cpp.html", null ],
+      [ "contrib/libdazeus-irc/src/utils.h", "utils_8h.html", null ],
       [ "src/config.cpp", "config_8cpp.html", null ],
       [ "src/config.h", "config_8h.html", null ],
       [ "src/database.cpp", "database_8cpp.html", null ],
@@ -78,9 +82,7 @@ var NAVTREE =
       [ "src/dazeusglobal.h", "dazeusglobal_8h.html", null ],
       [ "src/main.cpp", "main_8cpp.html", null ],
       [ "src/plugincomm.cpp", "plugincomm_8cpp.html", null ],
-      [ "src/plugincomm.h", "plugincomm_8h.html", null ],
-      [ "src/utils.cpp", "src_2utils_8cpp.html", null ],
-      [ "src/utils.h", "src_2utils_8h.html", null ]
+      [ "src/plugincomm.h", "plugincomm_8h.html", null ]
     ] ],
     [ "Directories", "dirs.html", [
       [ "bindings", "dir_e9a1afb47a08e9bb64dad51bae0f2774.html", [
@@ -88,7 +90,10 @@ var NAVTREE =
           [ "include", "dir_b0ce9f1ef90a533d160b814cc7d0f4ad.html", null ],
           [ "src", "dir_fa9a7bb3024747ad52102b03f7a35cff.html", null ]
         ] ],
-        [ "libdazeus-qt", "dir_44e0bb0438513cd58e11698c7c4718fa.html", null ]
+        [ "libdazeus-qt", "dir_44e0bb0438513cd58e11698c7c4718fa.html", null ],
+        [ "perl", "dir_1023390d5b12660421f5228156c83705.html", [
+          [ "lib", "dir_cbff8f1a1dbf21de7c4ece5efefaada7.html", null ]
+        ] ]
       ] ],
       [ "contrib", "dir_f5d0918862111507f60aa64617660d64.html", [
         [ "libdazeus-irc", "dir_963b9aa430ab1b5757b787e6d4ff9e7e.html", [

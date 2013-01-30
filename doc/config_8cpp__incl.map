@@ -1,6 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$config_8h.html" title="./config.h" alt="" coords="352,83,427,111"/>
-<area shape="rect" id="node35" href="$server_8h.html" title="server.h" alt="" coords="244,83,313,111"/>
-<area shape="rect" id="node11" href="$network_8h.html" title="network.h" alt="" coords="240,161,317,189"/>
-<area shape="rect" id="node21" href="$database_8h.html" title="database.h" alt="" coords="443,161,528,189"/>
+<area shape="rect" id="node9" href="$config_8h.html" title="./config.h" alt="" coords="347,83,421,111"/>
+<area shape="rect" id="node31" href="$utils_8h.html" title="utils.h" alt="" coords="755,161,811,189"/>
+<area shape="rect" id="node42" href="$server_8h.html" title="server.h" alt="" coords="219,83,288,111"/>
+<area shape="rect" id="node11" href="$network_8h.html" title="network.h" alt="" coords="501,161,579,189"/>
+<area shape="rect" id="node21" href="$database_8h.html" title="database.h" alt="" coords="341,161,427,189"/>
 </map>
