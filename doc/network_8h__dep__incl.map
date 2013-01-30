@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$network_8cpp.html" title="contrib/libdazeus&#45;irc/src/network.cpp" alt="" coords="5,161,243,189"/>
+<area shape="rect" id="node5" href="$server_8h.html" title="contrib/libdazeus&#45;irc/src/server.h" alt="" coords="449,83,660,111"/>
+<area shape="rect" id="node12" href="$plugincomm_8cpp.html" title="src/plugincomm.cpp" alt="" coords="645,161,784,189"/>
+<area shape="rect" id="node14" href="$config_8h.html" title="src/config.h" alt="" coords="735,83,823,111"/>
+<area shape="rect" id="node19" href="$src_2dazeus_8cpp.html" title="src/dazeus.cpp" alt="" coords="955,161,1064,189"/>
+<area shape="rect" id="node23" href="$plugincomm_8h.html" title="src/plugincomm.h" alt="" coords="847,83,972,111"/>
+<area shape="rect" id="node8" href="$server_8cpp.html" title="contrib/libdazeus&#45;irc/src/server.cpp" alt="" coords="267,161,493,189"/>
+<area shape="rect" id="node10" href="$config_8cpp.html" title="src/config.cpp" alt="" coords="517,161,621,189"/>
+<area shape="rect" id="node17" href="$database_8cpp.html" title="src/database.cpp" alt="" coords="808,161,931,189"/>
+</map>

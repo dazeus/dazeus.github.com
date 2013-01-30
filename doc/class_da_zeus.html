@@ -35,6 +35,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -80,23 +81,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">DaZeus Class Reference</div>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="DaZeus" -->
-<p><code>#include &lt;<a class="el" href="dazeus_8h_source.html">dazeus.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="src_2dazeus_8h_source.html">dazeus.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for DaZeus:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_da_zeus__coll__graph.png" border="0" usemap="#_da_zeus_coll__map" alt="Collaboration graph"/></div>
 <map name="_da_zeus_coll__map" id="_da_zeus_coll__map">
-</map>
+<area shape="rect" id="node2" href="class_plugin_comm.html" title="PluginComm" alt="" coords="3348,969,3444,997"/><area shape="rect" id="node4" href="class_network_listener.html" title="NetworkListener" alt="" coords="827,1017,944,1045"/><area shape="rect" id="node7" href="class_config_reader.html" title="ConfigReader" alt="" coords="1925,406,2029,434"/><area shape="rect" id="node9" href="struct_database_config.html" title="DatabaseConfig" alt="" coords="1216,267,1333,295"/><area shape="rect" id="node37" href="struct_config_reader_state.html" title="ConfigReaderState" alt="" coords="1595,346,1728,374"/><area shape="rect" id="node11" title="STL class." alt="" coords="225,1065,303,1093"/><area shape="rect" id="node17" href="struct_network_config.html" title="NetworkConfig" alt="" coords="484,601,593,629"/><area shape="rect" id="node22" href="struct_server_config.html" title="ServerConfig" alt="" coords="836,743,935,771"/><area shape="rect" id="node26" href="struct_global_config.html" title="GlobalConfig" alt="" coords="1225,419,1324,447"/><area shape="rect" id="node31" href="struct_plugin_config.html" title="PluginConfig" alt="" coords="837,539,933,567"/><area shape="rect" id="node47" href="struct_socket_config.html" title="SocketConfig" alt="" coords="836,163,935,191"/><area shape="rect" id="node60" href="class_network.html" title="Network" alt="" coords="1627,1107,1696,1135"/><area shape="rect" id="node62" href="class_server.html" title="Server" alt="" coords="1948,1078,2007,1106"/><area shape="rect" id="node98" href="class_database.html" title="A database frontend." alt="" coords="1939,1129,2016,1157"/><area shape="rect" id="node13" title="STL class." alt="" coords="7,1065,172,1093"/><area shape="rect" id="node103" href="structdazeus__struct.html" title="dazeus_struct" alt="" coords="1925,794,2029,822"/><area shape="rect" id="node105" href="structdazeus__event__struct.html" title="dazeus_event_struct" alt="" coords="1589,793,1733,821"/><area shape="rect" id="node107" href="structdazeus__stringlist__struct.html" title="dazeus_stringlist_struct" alt="" coords="1195,790,1355,818"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_da_zeus-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_da_zeus_1_1_event.html">Event</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_da_zeus_1_1_scope.html">Scope</a></td></tr>
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#ad9369870d60dfb1ddd761cc505f60466">ScopeType</a> { <a class="el" href="class_da_zeus.html#ad9369870d60dfb1ddd761cc505f60466aa0cad6c744f99063121340d936c0d8eb">GlobalScope</a> =  0x00, 
+<a class="el" href="class_da_zeus.html#ad9369870d60dfb1ddd761cc505f60466a342375af2922c88b2112cc300dda3f98">NetworkScope</a> =  0x01, 
+<a class="el" href="class_da_zeus.html#ad9369870d60dfb1ddd761cc505f60466a4244423baf0830f3be0a6e9a47cdb2a4">ReceiverScope</a> =  0x03, 
+<a class="el" href="class_da_zeus.html#ad9369870d60dfb1ddd761cc505f60466acf12b1583c456798a088146d47c56cb7">SenderScope</a> =  0x07
+ }</td></tr>
+<tr><td colspan="2"><h2><a name="signals"></a>
+Signals</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#acb81bdee9c9d91c291c0be9b4125c705">newEvent</a> (<a class="el" href="struct_da_zeus_1_1_event.html">DaZeus::Event</a> *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a13af0b78158c2cfbf8d4a91980a701b2">connectionFailed</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a52077b9dd626597a5ba39ad135dba548">DaZeus</a> (std::string configFileName=std::string())</td></tr>
@@ -119,11 +138,53 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to all networks marked "autoconnect".  <a href="#a35a292602216e4549601aabd368767ac"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#ab0526b3c2ae1e16c01082714cf8eac8b">connectDatabase</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start connecting to the database.  <a href="#ab0526b3c2ae1e16c01082714cf8eac8b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a345051d70e4cc682f443557c9473debb">DaZeus</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a8c894df795bc95cf5c0a2b3b7b6f7e36">~DaZeus</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a82704352e1784840a116644f89909770">error</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a6d6b53b50780a35750bb68bf4e759576">open</a> (const QString &amp;socketfile)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a65eec13bf6a4c667cae53ac4f48feabc">connected</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a2ce14d50026a58fcc7b180f9f4632ac5">networks</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a660f06bf96f27a0b128b088376c87705">channels</a> (const QString &amp;network)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#ae2277eecec1f006dc53f285c3cb8922e">message</a> (const QString &amp;network, const QString &amp;receiver, const QString &amp;message)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#addad3a167d4bc257920ab90cb865eeab">getProperty</a> (const QString &amp;variable, const <a class="el" href="struct_da_zeus_1_1_scope.html">Scope</a> &amp;scope)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a308335561586bda4d1bed1f7c6b6423a">setProperty</a> (const QString &amp;variable, const QString &amp;value, const <a class="el" href="struct_da_zeus_1_1_scope.html">Scope</a> &amp;scope)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a5602ea40589bb5dbab474ccb4703a9e9">unsetProperty</a> (const QString &amp;variable, const <a class="el" href="struct_da_zeus_1_1_scope.html">Scope</a> &amp;scope)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a181541de8a9d2172afc1d123f95eba7c">subscribe</a> (const QString &amp;event)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a657ad1503893f8329cbd30e299a16bf6">subscribe</a> (const QStringList &amp;event)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_da_zeus.html#a184e5272ba44f75cd8ede28210678140">handleEvent</a> (int timeout)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="dazeus_8h_source.html#l00017">17</a> of file <a class="el" href="dazeus_8h_source.html">dazeus.h</a>.</p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<p>Definition at line <a class="el" href="src_2dazeus_8h_source.html#l00017">17</a> of file <a class="el" href="src_2dazeus_8h_source.html">dazeus.h</a>.</p>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="ad9369870d60dfb1ddd761cc505f60466"></a><!-- doxytag: member="DaZeus::ScopeType" ref="ad9369870d60dfb1ddd761cc505f60466" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_da_zeus.html#ad9369870d60dfb1ddd761cc505f60466">DaZeus::ScopeType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ad9369870d60dfb1ddd761cc505f60466aa0cad6c744f99063121340d936c0d8eb"></a><!-- doxytag: member="GlobalScope" ref="ad9369870d60dfb1ddd761cc505f60466aa0cad6c744f99063121340d936c0d8eb" args="" -->GlobalScope</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad9369870d60dfb1ddd761cc505f60466a342375af2922c88b2112cc300dda3f98"></a><!-- doxytag: member="NetworkScope" ref="ad9369870d60dfb1ddd761cc505f60466a342375af2922c88b2112cc300dda3f98" args="" -->NetworkScope</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad9369870d60dfb1ddd761cc505f60466a4244423baf0830f3be0a6e9a47cdb2a4"></a><!-- doxytag: member="ReceiverScope" ref="ad9369870d60dfb1ddd761cc505f60466a4244423baf0830f3be0a6e9a47cdb2a4" args="" -->ReceiverScope</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad9369870d60dfb1ddd761cc505f60466acf12b1583c456798a088146d47c56cb7"></a><!-- doxytag: member="SenderScope" ref="ad9369870d60dfb1ddd761cc505f60466acf12b1583c456798a088146d47c56cb7" args="" -->SenderScope</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8h_source.html#l00051">51</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8h_source.html">dazeus.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a52077b9dd626597a5ba39ad135dba548"></a><!-- doxytag: member="DaZeus::DaZeus" ref="a52077b9dd626597a5ba39ad135dba548" args="(std::string configFileName=std::string())" -->
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +208,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00023">23</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00023">23</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -167,7 +228,41 @@ Public Member Functions</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00036">36</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00036">36</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a345051d70e4cc682f443557c9473debb"></a><!-- doxytag: member="DaZeus::DaZeus" ref="a345051d70e4cc682f443557c9473debb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DaZeus::DaZeus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00078">78</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c894df795bc95cf5c0a2b3b7b6f7e36"></a><!-- doxytag: member="DaZeus::~DaZeus" ref="a8c894df795bc95cf5c0a2b3b7b6f7e36" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DaZeus::~DaZeus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -189,7 +284,26 @@ Public Member Functions</h2></td></tr>
 <p>Connect to all networks marked "autoconnect". </p>
 <p>Warning: This method is usually called outside the event loop, just after initialisation. </p>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00057">57</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00057">57</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a660f06bf96f27a0b128b088376c87705"></a><!-- doxytag: member="DaZeus::channels" ref="a660f06bf96f27a0b128b088376c87705" args="(const QString &amp;network)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList DaZeus::channels </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>network</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00117">117</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -207,7 +321,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00083">83</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00083">83</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +341,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns whether the configuration is loaded. </p>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00090">90</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00090">90</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -248,7 +362,41 @@ Public Member Functions</h2></td></tr>
 <p>Start connecting to the database. </p>
 <p>Does nothing if already connected. </p>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00101">101</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00101">101</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65eec13bf6a4c667cae53ac4f48feabc"></a><!-- doxytag: member="DaZeus::connected" ref="a65eec13bf6a4c667cae53ac4f48feabc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::connected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00101">101</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13af0b78158c2cfbf8d4a91980a701b2"></a><!-- doxytag: member="DaZeus::connectionFailed" ref="a13af0b78158c2cfbf8d4a91980a701b2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DaZeus::connectionFailed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -268,7 +416,75 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the database. </p>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00122">122</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00122">122</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82704352e1784840a116644f89909770"></a><!-- doxytag: member="DaZeus::error" ref="a82704352e1784840a116644f89909770" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DaZeus::error </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Retrieve the last error generated or NULL if there was no error. </p>
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00084">84</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="addad3a167d4bc257920ab90cb865eeab"></a><!-- doxytag: member="DaZeus::getProperty" ref="addad3a167d4bc257920ab90cb865eeab" args="(const QString &amp;variable, const Scope &amp;scope)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DaZeus::getProperty </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>variable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_da_zeus_1_1_scope.html">Scope</a> &amp;&#160;</td>
+          <td class="paramname"><em>scope</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00134">134</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a184e5272ba44f75cd8ede28210678140"></a><!-- doxytag: member="DaZeus::handleEvent" ref="a184e5272ba44f75cd8ede28210678140" args="(int timeout)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::handleEvent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Wait 'timeout' seconds for one next event. Subscribe to the <a class="el" href="class_da_zeus.html#acb81bdee9c9d91c291c0be9b4125c705">newEvent()</a> signal to catch it. If 'timeout' is -1, wait forever. If 'timeout' is 0, check if there is one, and return immediately. Returns true if an event was emitted. </p>
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00179">179</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -288,7 +504,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Initialises plugins from the configuration file. </p>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00132">132</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00132">132</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +525,42 @@ Public Member Functions</h2></td></tr>
 <p>(Re-)loads configuration from the configuration file. </p>
 <p>If loading failed, this method returns false. Note: this method is automatically called when setConfigFileName is called, and by the constructor. </p>
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00148">148</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00148">148</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2277eecec1f006dc53f285c3cb8922e"></a><!-- doxytag: member="DaZeus::message" ref="ae2277eecec1f006dc53f285c3cb8922e" args="(const QString &amp;network, const QString &amp;receiver, const QString &amp;message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::message </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>network</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00129">129</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -327,7 +578,62 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="dazeus_8h_source.html#l00027">27</a> of file <a class="el" href="dazeus_8h_source.html">dazeus.h</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8h_source.html#l00027">27</a> of file <a class="el" href="src_2dazeus_8h_source.html">dazeus.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ce14d50026a58fcc7b180f9f4632ac5"></a><!-- doxytag: member="DaZeus::networks" ref="a2ce14d50026a58fcc7b180f9f4632ac5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList DaZeus::networks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00105">105</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb81bdee9c9d91c291c0be9b4125c705"></a><!-- doxytag: member="DaZeus::newEvent" ref="acb81bdee9c9d91c291c0be9b4125c705" args="(DaZeus::Event *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DaZeus::newEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_da_zeus_1_1_event.html">DaZeus::Event</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6d6b53b50780a35750bb68bf4e759576"></a><!-- doxytag: member="DaZeus::open" ref="a6d6b53b50780a35750bb68bf4e759576" args="(const QString &amp;socketfile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::open </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>socketfile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Connect this dazeus instance. Takes socket location as its only parameter. Socket can be either of the form "unix:/path/to/unix/socket" or "tcp:hostname:port" (including "tcp:127.0.0.1:1234"). </p>
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00088">88</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +651,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00212">212</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00212">212</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
@@ -364,20 +670,124 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="dazeus_8cpp_source.html#l00219">219</a> of file <a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+<p>Definition at line <a class="el" href="src_2dazeus_8cpp_source.html#l00219">219</a> of file <a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a308335561586bda4d1bed1f7c6b6423a"></a><!-- doxytag: member="DaZeus::setProperty" ref="a308335561586bda4d1bed1f7c6b6423a" args="(const QString &amp;variable, const QString &amp;value, const Scope &amp;scope)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::setProperty </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>variable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_da_zeus_1_1_scope.html">Scope</a> &amp;&#160;</td>
+          <td class="paramname"><em>scope</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00145">145</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a657ad1503893f8329cbd30e299a16bf6"></a><!-- doxytag: member="DaZeus::subscribe" ref="a657ad1503893f8329cbd30e299a16bf6" args="(const QStringList &amp;event)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00157">157</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a181541de8a9d2172afc1d123f95eba7c"></a><!-- doxytag: member="DaZeus::subscribe" ref="a181541de8a9d2172afc1d123f95eba7c" args="(const QString &amp;event)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00153">153</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5602ea40589bb5dbab474ccb4703a9e9"></a><!-- doxytag: member="DaZeus::unsetProperty" ref="a5602ea40589bb5dbab474ccb4703a9e9" args="(const QString &amp;variable, const Scope &amp;scope)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DaZeus::unsetProperty </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>variable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_da_zeus_1_1_scope.html">Scope</a> &amp;&#160;</td>
+          <td class="paramname"><em>scope</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html#l00149">149</a> of file <a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="dazeus_8h_source.html">dazeus.h</a></li>
-<li>src/<a class="el" href="dazeus_8cpp_source.html">dazeus.cpp</a></li>
+<li>src/<a class="el" href="src_2dazeus_8h_source.html">dazeus.h</a></li>
+<li>bindings/libdazeus-qt/<a class="el" href="bindings_2libdazeus-qt_2dazeus_8h_source.html">dazeus.h</a></li>
+<li>src/<a class="el" href="src_2dazeus_8cpp_source.html">dazeus.cpp</a></li>
+<li>bindings/libdazeus-qt/<a class="el" href="bindings_2libdazeus-qt_2dazeus_8cpp_source.html">dazeus.cpp</a></li>
 </ul>
 </div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="class_da_zeus.html">DaZeus</a>      </li>
-      <li class="footer">Generated on Tue Jan 29 2013 02:11:44 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 04:18:14 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

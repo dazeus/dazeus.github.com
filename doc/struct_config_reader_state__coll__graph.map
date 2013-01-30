@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$struct_database_config.html" title="DatabaseConfig" alt="" coords="653,69,771,97"/>
+<area shape="rect" id="node4" title="STL class." alt="" coords="225,295,303,323"/>
+<area shape="rect" id="node8" href="$struct_server_config.html" title="ServerConfig" alt="" coords="471,182,569,210"/>
+<area shape="rect" id="node10" href="$struct_network_config.html" title="NetworkConfig" alt="" coords="1136,226,1245,254"/>
+<area shape="rect" id="node20" href="$struct_global_config.html" title="GlobalConfig" alt="" coords="1011,346,1109,374"/>
+<area shape="rect" id="node25" href="$struct_plugin_config.html" title="PluginConfig" alt="" coords="843,473,939,501"/>
+<area shape="rect" id="node34" href="$struct_socket_config.html" title="SocketConfig" alt="" coords="1141,567,1240,595"/>
+<area shape="rect" id="node6" title="STL class." alt="" coords="7,295,172,323"/>
+</map>

@@ -35,6 +35,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -93,12 +94,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;utils.h&quot;</code><br/>
 <code>#include &quot;../contrib/libdazeus-irc/src/utils.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="server_8h_source.html">server.h</a>&quot;</code><br/>
+<code>#include &lt;limits&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for config.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="config_8cpp__incl.png" border="0" usemap="#src_2config_8cpp" alt=""/></div>
 <map name="src_2config_8cpp" id="src_2config_8cpp">
-</map>
+<area shape="rect" id="node9" href="config_8h.html" title="./config.h" alt="" coords="352,83,427,111"/><area shape="rect" id="node35" href="server_8h.html" title="server.h" alt="" coords="244,83,313,111"/><area shape="rect" id="node11" href="network_8h.html" title="network.h" alt="" coords="240,161,317,189"/><area shape="rect" id="node21" href="database_8h.html" title="database.h" alt="" coords="443,161,528,189"/></map>
 </div>
 </div>
 <p><a href="config_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -158,7 +160,7 @@ Variables</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="config_8cpp_source.html#l00014">14</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00015">15</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -178,7 +180,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="config_8cpp_source.html#l00101">101</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00102">102</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +199,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="config_8cpp_source.html#l00214">214</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00215">215</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -216,7 +218,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="config_8cpp_source.html#l00162">162</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00163">163</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +237,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="config_8cpp_source.html#l00271">271</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00272">272</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -254,7 +256,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="config_8cpp_source.html#l00151">151</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00152">152</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -270,7 +272,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="config_8cpp_source.html#l00066">66</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00067">67</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -279,7 +281,7 @@ Variables</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="config_8cpp.html">config.cpp</a>      </li>
-      <li class="footer">Generated on Tue Jan 29 2013 02:11:44 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 04:18:14 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

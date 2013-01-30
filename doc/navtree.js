@@ -1,6 +1,10 @@
 var NAVTREE =
 [
   [ "DaZeus", "index.html", [
+    [ "Main Page", "index.html", null ],
+    [ "Related Pages", "pages.html", [
+      [ "DaZeus 2 Plugin Protocol", "pluginprotocoldocs.html", null ]
+    ] ],
     [ "Class List", "annotated.html", [
       [ "ConfigReader", "class_config_reader.html", null ],
       [ "ConfigReaderState", "struct_config_reader_state.html", null ],
@@ -11,6 +15,7 @@ var NAVTREE =
       [ "dazeus_scope_struct", "structdazeus__scope__struct.html", null ],
       [ "dazeus_stringlist_struct", "structdazeus__stringlist__struct.html", null ],
       [ "dazeus_struct", "structdazeus__struct.html", null ],
+      [ "DaZeus::Event", "struct_da_zeus_1_1_event.html", null ],
       [ "ConfigReader::exception", "struct_config_reader_1_1exception.html", null ],
       [ "GlobalConfig", "struct_global_config.html", null ],
       [ "Network", "class_network.html", null ],
@@ -18,11 +23,11 @@ var NAVTREE =
       [ "NetworkListener", "class_network_listener.html", null ],
       [ "PluginComm", "class_plugin_comm.html", null ],
       [ "PluginConfig", "struct_plugin_config.html", null ],
+      [ "DaZeus::Scope", "struct_da_zeus_1_1_scope.html", null ],
       [ "Server", "class_server.html", null ],
       [ "ServerConfig", "struct_server_config.html", null ],
       [ "ServerSorter", "struct_server_sorter.html", null ],
       [ "SocketConfig", "struct_socket_config.html", null ],
-      [ "TestListener", "class_test_listener.html", null ],
       [ "utf8_encoding_error", "structutf8__encoding__error.html", null ]
     ] ],
     [ "Class Index", "classes.html", null ],
@@ -36,15 +41,16 @@ var NAVTREE =
       [ "dazeus_scope_struct", "structdazeus__scope__struct.html", null ],
       [ "dazeus_stringlist_struct", "structdazeus__stringlist__struct.html", null ],
       [ "dazeus_struct", "structdazeus__struct.html", null ],
+      [ "DaZeus::Event", "struct_da_zeus_1_1_event.html", null ],
       [ "ConfigReader::exception", "struct_config_reader_1_1exception.html", null ],
       [ "GlobalConfig", "struct_global_config.html", null ],
       [ "Network", "class_network.html", null ],
       [ "NetworkConfig", "struct_network_config.html", null ],
       [ "NetworkListener", "class_network_listener.html", [
-        [ "PluginComm", "class_plugin_comm.html", null ],
-        [ "TestListener", "class_test_listener.html", null ]
+        [ "PluginComm", "class_plugin_comm.html", null ]
       ] ],
       [ "PluginConfig", "struct_plugin_config.html", null ],
+      [ "DaZeus::Scope", "struct_da_zeus_1_1_scope.html", null ],
       [ "Server", "class_server.html", null ],
       [ "ServerConfig", "struct_server_config.html", null ],
       [ "ServerSorter", "struct_server_sorter.html", null ],
@@ -53,6 +59,8 @@ var NAVTREE =
     ] ],
     [ "Class Members", "functions.html", null ],
     [ "File List", "files.html", [
+      [ "bindings/libdazeus-qt/dazeus.cpp", "bindings_2libdazeus-qt_2dazeus_8cpp.html", null ],
+      [ "bindings/libdazeus-qt/dazeus.h", "bindings_2libdazeus-qt_2dazeus_8h.html", null ],
       [ "bindings/libdazeus/include/libdazeus.h", "libdazeus_8h.html", null ],
       [ "bindings/libdazeus/src/libdazeus.c", "libdazeus_8c.html", null ],
       [ "contrib/libdazeus-irc/src/network.cpp", "network_8cpp.html", null ],
@@ -61,16 +69,12 @@ var NAVTREE =
       [ "contrib/libdazeus-irc/src/server.h", "server_8h.html", null ],
       [ "contrib/libdazeus-irc/src/utils.cpp", "contrib_2libdazeus-irc_2src_2utils_8cpp.html", null ],
       [ "contrib/libdazeus-irc/src/utils.h", "contrib_2libdazeus-irc_2src_2utils_8h.html", null ],
-      [ "contrib/libdazeus-irc/tests/compile.cpp", "compile_8cpp.html", null ],
-      [ "contrib/libdazeus-irc/tests/connect.cpp", "connect_8cpp.html", null ],
-      [ "contrib/libdazeus-irc/tests/connectevents.cpp", "connectevents_8cpp.html", null ],
-      [ "contrib/libdazeus-irc/tests/reconnect.cpp", "reconnect_8cpp.html", null ],
       [ "src/config.cpp", "config_8cpp.html", null ],
       [ "src/config.h", "config_8h.html", null ],
       [ "src/database.cpp", "database_8cpp.html", null ],
       [ "src/database.h", "database_8h.html", null ],
-      [ "src/dazeus.cpp", "dazeus_8cpp.html", null ],
-      [ "src/dazeus.h", "dazeus_8h.html", null ],
+      [ "src/dazeus.cpp", "src_2dazeus_8cpp.html", null ],
+      [ "src/dazeus.h", "src_2dazeus_8h.html", null ],
       [ "src/dazeusglobal.h", "dazeusglobal_8h.html", null ],
       [ "src/main.cpp", "main_8cpp.html", null ],
       [ "src/plugincomm.cpp", "plugincomm_8cpp.html", null ],
@@ -83,12 +87,12 @@ var NAVTREE =
         [ "libdazeus", "dir_40ca6315ddbcc6fcadb491a538df6a0b.html", [
           [ "include", "dir_b0ce9f1ef90a533d160b814cc7d0f4ad.html", null ],
           [ "src", "dir_fa9a7bb3024747ad52102b03f7a35cff.html", null ]
-        ] ]
+        ] ],
+        [ "libdazeus-qt", "dir_44e0bb0438513cd58e11698c7c4718fa.html", null ]
       ] ],
       [ "contrib", "dir_f5d0918862111507f60aa64617660d64.html", [
         [ "libdazeus-irc", "dir_963b9aa430ab1b5757b787e6d4ff9e7e.html", [
-          [ "src", "dir_0b6e360c4b805ba639b72ddafed65e8a.html", null ],
-          [ "tests", "dir_f1763e05f5a243da9cfa9c28b6d27661.html", null ]
+          [ "src", "dir_0b6e360c4b805ba639b72ddafed65e8a.html", null ]
         ] ]
       ] ],
       [ "src", "dir_69729c1c964cfc521d652d708edafe9b.html", null ]

@@ -1,0 +1,3 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$struct_server_sorter.html" title="Chooses one server or the other based on the priority and failure rate. Failure rate is recorded in t..." alt="" coords="7,5,103,33"/>
+</map>

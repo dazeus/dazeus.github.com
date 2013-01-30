@@ -35,6 +35,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="dirs.html"><span>Directories</span></a></li>
@@ -546,80 +547,81 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00489"></a>00489                 <span class="keywordflow">return</span>; <span class="comment">// deadline is set, not passed</span>
 <a name="l00490"></a>00490         }
 <a name="l00491"></a>00491         <span class="keywordflow">if</span>(deadline_ == 0) {
-<a name="l00492"></a>00492                 <span class="keywordflow">if</span>(nextPongDeadline_ &gt; time(NULL)) {
-<a name="l00493"></a>00493                         nextPongDeadline_ = time(NULL) + 30;
-<a name="l00494"></a>00494                         deadline_ = time(NULL) + config_-&gt;<a class="code" href="struct_network_config.html#a60276cc42333b10bb9b060cb3062d7dc">pongTimeout</a>;
-<a name="l00495"></a>00495                         activeServer_-&gt;<a class="code" href="class_server.html#a5bddeb77b9d5dbfe1d9fcdca18c85acb">ping</a>();
-<a name="l00496"></a>00496                 }
-<a name="l00497"></a>00497                 <span class="keywordflow">return</span>;
-<a name="l00498"></a>00498         }
-<a name="l00499"></a>00499 
-<a name="l00500"></a>00500         <span class="comment">// Connection didn&#39;t finish in time, disconnect and try again</span>
-<a name="l00501"></a>00501         <a class="code" href="class_network.html#a5645996a648b1b796de88af8b9c53926">flagUndesirableServer</a>(<a class="code" href="class_network.html#a5d3efaf3ed3b73fa85ce72ed71699064">activeServer</a>()-&gt;<a class="code" href="class_network.html#ae971a541b09c08998be7287e3ccc685b">config</a>());
-<a name="l00502"></a>00502         activeServer_-&gt;<a class="code" href="class_server.html#af9b8cf6b8e03ac61bc15f1c98d3d8c6d">disconnectFromServer</a>(<a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1a2aa49fb23f2dbf41fb6d4322f400bcdc">Network::TimeoutReason</a>);
-<a name="l00503"></a>00503         onFailedConnection();
-<a name="l00504"></a>00504         <span class="comment">// no need to delete the server later, though: we can do it from here</span>
-<a name="l00505"></a>00505         <span class="comment">// TODO: use smart ptrs so this mess gets elegant by refcounting</span>
-<a name="l00506"></a>00506         deleteServer_ = <span class="keyword">false</span>;
-<a name="l00507"></a>00507         <span class="keyword">delete</span> activeServer_;
-<a name="l00508"></a>00508         activeServer_ = 0;
-<a name="l00509"></a>00509         <a class="code" href="class_network.html#a5223bc7dcb8fdda5e1ba188cd4c1ae42">connectToNetwork</a>(<span class="keyword">true</span>);
-<a name="l00510"></a>00510 }
-<a name="l00511"></a>00511 
-<a name="l00512"></a><a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">00512</a> <span class="keywordtype">void</span> <a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">Network::run</a>() {
-<a name="l00513"></a>00513         std::vector&lt;Network*&gt; nets;
-<a name="l00514"></a>00514         nets &lt;&lt; <span class="keyword">this</span>;
-<a name="l00515"></a>00515         <a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">Network::run</a>(nets);
-<a name="l00516"></a>00516 }
-<a name="l00517"></a>00517 
-<a name="l00518"></a><a class="code" href="class_network.html#a694a7da31157bdb00aeea4be9e1e5db4">00518</a> <span class="keywordtype">void</span> <a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">Network::run</a>(std::vector&lt;Network*&gt; networks) {
-<a name="l00519"></a>00519         fd_set sockets, out_sockets;
-<a name="l00520"></a>00520         <span class="keywordtype">int</span> highest;
-<a name="l00521"></a>00521         std::vector&lt;Network*&gt;::const_iterator nit;
-<a name="l00522"></a>00522         <span class="keyword">struct </span>timeval timeout;
-<a name="l00523"></a>00523         timeout.tv_sec = 1;
-<a name="l00524"></a>00524         timeout.tv_usec = 0;
-<a name="l00525"></a>00525         <span class="keywordflow">while</span>(1) {
-<a name="l00526"></a>00526                 highest = 0;
-<a name="l00527"></a>00527                 FD_ZERO(&amp;sockets);
-<a name="l00528"></a>00528                 FD_ZERO(&amp;out_sockets);
-<a name="l00529"></a>00529                 <span class="keywordflow">for</span>(nit = networks.begin(); nit != networks.end(); ++nit) {
-<a name="l00530"></a>00530                         <span class="keywordflow">if</span>((*nit)-&gt;activeServer()) {
-<a name="l00531"></a>00531                                 <span class="keywordtype">int</span> ircmaxfd = 0;
-<a name="l00532"></a>00532                                 (*nit)-&gt;addDescriptors(&amp;sockets, &amp;out_sockets, &amp;ircmaxfd);
-<a name="l00533"></a>00533                                 <span class="keywordflow">if</span>(ircmaxfd &gt; highest)
-<a name="l00534"></a>00534                                         highest = ircmaxfd;
-<a name="l00535"></a>00535                         }
-<a name="l00536"></a>00536                 }
-<a name="l00537"></a>00537 
-<a name="l00538"></a>00538                 <span class="comment">// If all networks are disconnected, nothing will happen</span>
-<a name="l00539"></a>00539                 <span class="comment">// anymore; even the listeners won&#39;t be triggered anymore.</span>
-<a name="l00540"></a>00540                 <span class="comment">// In such a case, break the event loop</span>
-<a name="l00541"></a>00541                 <span class="keywordflow">if</span>(highest == 0) {
-<a name="l00542"></a>00542                         <span class="keywordflow">return</span>;
-<a name="l00543"></a>00543                 }
-<a name="l00544"></a>00544 
-<a name="l00545"></a>00545                 <span class="keywordtype">int</span> socks = select(highest + 1, &amp;sockets, &amp;out_sockets, NULL, &amp;timeout);
-<a name="l00546"></a>00546                 <span class="keywordflow">if</span>(socks &lt; 0) {
-<a name="l00547"></a>00547                         perror(<span class="stringliteral">&quot;select() failed&quot;</span>);
-<a name="l00548"></a>00548                         <span class="keywordflow">return</span>;
-<a name="l00549"></a>00549                 }
-<a name="l00550"></a>00550                 <span class="keywordflow">else</span> <span class="keywordflow">if</span>(socks == 0) {
-<a name="l00551"></a>00551                         <span class="keywordflow">continue</span>;
-<a name="l00552"></a>00552                 }
-<a name="l00553"></a>00553                 <span class="keywordflow">for</span>(nit = networks.begin(); nit != networks.end(); ++nit) {
-<a name="l00554"></a>00554                         <span class="keywordflow">if</span>((*nit)-&gt;activeServer()) {
-<a name="l00555"></a>00555                                 (*nit)-&gt;processDescriptors(&amp;sockets, &amp;out_sockets);
-<a name="l00556"></a>00556                         }
-<a name="l00557"></a>00557                 }
-<a name="l00558"></a>00558         }
-<a name="l00559"></a>00559 }
+<a name="l00492"></a>00492                 <span class="keywordflow">if</span>(time(NULL) &gt; nextPongDeadline_) {
+<a name="l00493"></a>00493                         <span class="comment">// We&#39;ve passed the nextPongDeadline, send the next PING</span>
+<a name="l00494"></a>00494                         nextPongDeadline_ = time(NULL) + 30;
+<a name="l00495"></a>00495                         deadline_ = time(NULL) + config_-&gt;<a class="code" href="struct_network_config.html#a60276cc42333b10bb9b060cb3062d7dc">pongTimeout</a>;
+<a name="l00496"></a>00496                         activeServer_-&gt;<a class="code" href="class_server.html#a5bddeb77b9d5dbfe1d9fcdca18c85acb">ping</a>();
+<a name="l00497"></a>00497                 }
+<a name="l00498"></a>00498                 <span class="keywordflow">return</span>;
+<a name="l00499"></a>00499         }
+<a name="l00500"></a>00500 
+<a name="l00501"></a>00501         <span class="comment">// Connection didn&#39;t finish in time, disconnect and try again</span>
+<a name="l00502"></a>00502         <a class="code" href="class_network.html#a5645996a648b1b796de88af8b9c53926">flagUndesirableServer</a>(<a class="code" href="class_network.html#a5d3efaf3ed3b73fa85ce72ed71699064">activeServer</a>()-&gt;<a class="code" href="class_network.html#ae971a541b09c08998be7287e3ccc685b">config</a>());
+<a name="l00503"></a>00503         activeServer_-&gt;<a class="code" href="class_server.html#af9b8cf6b8e03ac61bc15f1c98d3d8c6d">disconnectFromServer</a>(<a class="code" href="class_network.html#ad00bc3bcd54adfb9bcec1372338219c1a2aa49fb23f2dbf41fb6d4322f400bcdc">Network::TimeoutReason</a>);
+<a name="l00504"></a>00504         onFailedConnection();
+<a name="l00505"></a>00505         <span class="comment">// no need to delete the server later, though: we can do it from here</span>
+<a name="l00506"></a>00506         <span class="comment">// TODO: use smart ptrs so this mess gets elegant by refcounting</span>
+<a name="l00507"></a>00507         deleteServer_ = <span class="keyword">false</span>;
+<a name="l00508"></a>00508         <span class="keyword">delete</span> activeServer_;
+<a name="l00509"></a>00509         activeServer_ = 0;
+<a name="l00510"></a>00510         <a class="code" href="class_network.html#a5223bc7dcb8fdda5e1ba188cd4c1ae42">connectToNetwork</a>(<span class="keyword">true</span>);
+<a name="l00511"></a>00511 }
+<a name="l00512"></a>00512 
+<a name="l00513"></a><a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">00513</a> <span class="keywordtype">void</span> <a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">Network::run</a>() {
+<a name="l00514"></a>00514         std::vector&lt;Network*&gt; nets;
+<a name="l00515"></a>00515         nets &lt;&lt; <span class="keyword">this</span>;
+<a name="l00516"></a>00516         <a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">Network::run</a>(nets);
+<a name="l00517"></a>00517 }
+<a name="l00518"></a>00518 
+<a name="l00519"></a><a class="code" href="class_network.html#a694a7da31157bdb00aeea4be9e1e5db4">00519</a> <span class="keywordtype">void</span> <a class="code" href="class_network.html#acc13a2e54ee332bb9f288f953ae141ed">Network::run</a>(std::vector&lt;Network*&gt; networks) {
+<a name="l00520"></a>00520         fd_set sockets, out_sockets;
+<a name="l00521"></a>00521         <span class="keywordtype">int</span> highest;
+<a name="l00522"></a>00522         std::vector&lt;Network*&gt;::const_iterator nit;
+<a name="l00523"></a>00523         <span class="keyword">struct </span>timeval timeout;
+<a name="l00524"></a>00524         timeout.tv_sec = 1;
+<a name="l00525"></a>00525         timeout.tv_usec = 0;
+<a name="l00526"></a>00526         <span class="keywordflow">while</span>(1) {
+<a name="l00527"></a>00527                 highest = 0;
+<a name="l00528"></a>00528                 FD_ZERO(&amp;sockets);
+<a name="l00529"></a>00529                 FD_ZERO(&amp;out_sockets);
+<a name="l00530"></a>00530                 <span class="keywordflow">for</span>(nit = networks.begin(); nit != networks.end(); ++nit) {
+<a name="l00531"></a>00531                         <span class="keywordflow">if</span>((*nit)-&gt;activeServer()) {
+<a name="l00532"></a>00532                                 <span class="keywordtype">int</span> ircmaxfd = 0;
+<a name="l00533"></a>00533                                 (*nit)-&gt;addDescriptors(&amp;sockets, &amp;out_sockets, &amp;ircmaxfd);
+<a name="l00534"></a>00534                                 <span class="keywordflow">if</span>(ircmaxfd &gt; highest)
+<a name="l00535"></a>00535                                         highest = ircmaxfd;
+<a name="l00536"></a>00536                         }
+<a name="l00537"></a>00537                 }
+<a name="l00538"></a>00538 
+<a name="l00539"></a>00539                 <span class="comment">// If all networks are disconnected, nothing will happen</span>
+<a name="l00540"></a>00540                 <span class="comment">// anymore; even the listeners won&#39;t be triggered anymore.</span>
+<a name="l00541"></a>00541                 <span class="comment">// In such a case, break the event loop</span>
+<a name="l00542"></a>00542                 <span class="keywordflow">if</span>(highest == 0) {
+<a name="l00543"></a>00543                         <span class="keywordflow">return</span>;
+<a name="l00544"></a>00544                 }
+<a name="l00545"></a>00545 
+<a name="l00546"></a>00546                 <span class="keywordtype">int</span> socks = select(highest + 1, &amp;sockets, &amp;out_sockets, NULL, &amp;timeout);
+<a name="l00547"></a>00547                 <span class="keywordflow">if</span>(socks &lt; 0) {
+<a name="l00548"></a>00548                         perror(<span class="stringliteral">&quot;select() failed&quot;</span>);
+<a name="l00549"></a>00549                         <span class="keywordflow">return</span>;
+<a name="l00550"></a>00550                 }
+<a name="l00551"></a>00551                 <span class="keywordflow">else</span> <span class="keywordflow">if</span>(socks == 0) {
+<a name="l00552"></a>00552                         <span class="keywordflow">continue</span>;
+<a name="l00553"></a>00553                 }
+<a name="l00554"></a>00554                 <span class="keywordflow">for</span>(nit = networks.begin(); nit != networks.end(); ++nit) {
+<a name="l00555"></a>00555                         <span class="keywordflow">if</span>((*nit)-&gt;activeServer()) {
+<a name="l00556"></a>00556                                 (*nit)-&gt;processDescriptors(&amp;sockets, &amp;out_sockets);
+<a name="l00557"></a>00557                         }
+<a name="l00558"></a>00558                 }
+<a name="l00559"></a>00559         }
+<a name="l00560"></a>00560 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="network_8cpp.html">network.cpp</a>      </li>
-      <li class="footer">Generated on Tue Jan 29 2013 02:11:44 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 04:18:14 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
