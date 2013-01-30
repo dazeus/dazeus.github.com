@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>DaZeus: DaZeus 2 Plugin Protocol</title>
+<title>DaZeus: %DaZeus 2 Plugin Protocol</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -74,12 +74,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="class_da_zeus.html">DaZeus</a> 2 Plugin Protocol </div>  </div>
+<div class="title">DaZeus 2 Plugin Protocol </div>  </div>
 </div>
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="Introduction"></a>
 Introduction</h2>
-<p>The <a class="el" href="class_da_zeus.html">DaZeus</a> 2 plugin protocol links the core bot with the installed plugins, and is used to communicate events and their responses. Also, it exposes DaZeus' own configuration and database APIs, so plugins can easily attach without requiring configuration of their own.</p>
+<p>The DaZeus 2 plugin protocol links the core bot with the installed plugins, and is used to communicate events and their responses. Also, it exposes DaZeus' own configuration and database APIs, so plugins can easily attach without requiring configuration of their own.</p>
 <p>Bindings for this protocol are available for several languages. Of course, patches are very welcome for newly implemented bindings! For help with writing bindings, you can look at the logic in existing bindings -- see the main page of this documentation to find their source code. Also, to experiment with the protocol without the use of special libraries, the <code>socat</code> or <code>nc</code> tool can be used as follows, where <code>dazeus.sock</code> is the UNIX socket:</p>
 <ul>
 <li><code>socat UNIX-CONNECT:dazeus.sock READLINE</code><br/>
@@ -110,7 +110,7 @@ Requests</h2>
 <ul>
 <li>Get some information, like known networks or joined channels,</li>
 <li>Do something on IRC, such as saying something or leaving a channel,</li>
-<li>Accessing <a class="el" href="class_da_zeus.html">DaZeus</a> internals, such as events or the database.</li>
+<li>Accessing DaZeus internals, such as events or the database.</li>
 </ul>
 <p>The "get all known networks" request looks like <code>{"get":"networks"}</code>. The response will have the list of networks in the <code>networks</code> field. The "get all joined channels" request will look like <code>{"get":"channels", "params":["the network"]}</code>. If the network is joined, the response will have a <code>channels</code> field with an array value. There is a similar <code>nick</code> command which retrieves our own nickname on a given network.</p>
 <p>A message request will look like: </p>
@@ -138,7 +138,7 @@ Events</h2>
 </pre></div><p>All events will have have an <code>event</code> field set to one of the above strings, and a <code>params</code> field that will contain an array with parameters depending on the event.</p>
 <h2><a class="anchor" id="Properties"></a>
 Properties</h2>
-<p>Properties can be sent and retrieved over the <a class="el" href="class_da_zeus.html">DaZeus</a> 2 plugin protocol and act as a database for zero-configuration plugins. Using the <code>property set</code> command a property can be stored: </p>
+<p>Properties can be sent and retrieved over the DaZeus 2 plugin protocol and act as a database for zero-configuration plugins. Using the <code>property set</code> command a property can be stored: </p>
 <div class="fragment"><pre class="fragment">  {<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;property&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;set&quot;</span>,<span class="stringliteral">&quot;examples.counter.count&quot;</span>,<span class="stringliteral">&quot;2&quot;</span>]}
 </pre></div><p>After this, the property can be retrieved using <code>property get</code>: </p>
 <div class="fragment"><pre class="fragment">  {<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;property&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;get&quot;</span>,<span class="stringliteral">&quot;examples.counter.count&quot;</span>]}
@@ -150,7 +150,7 @@ Properties</h2>
 <div class="fragment"><pre class="fragment">  {<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;property&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;keys&quot;</span>,<span class="stringliteral">&quot;examples.counter&quot;</span>]}
 </pre></div><p> Which could respond: </p>
 <div class="fragment"><pre class="fragment">  {<span class="stringliteral">&quot;did&quot;</span>:<span class="stringliteral">&quot;property&quot;</span>, <span class="stringliteral">&quot;keys&quot;</span>:[<span class="stringliteral">&quot;count&quot;</span>]}
-</pre></div><p>For added functionality, you can look into variable scopes. Using the commands above, variables will be stored and returned "as is" (global scope). But, suppose you want to have a variable especially for a specific IRC channel, or even a specific user. You could use various different names per variable, but scoping allows you to let <a class="el" href="class_da_zeus.html">DaZeus</a> do the work for you.</p>
+</pre></div><p>For added functionality, you can look into variable scopes. Using the commands above, variables will be stored and returned "as is" (global scope). But, suppose you want to have a variable especially for a specific IRC channel, or even a specific user. You could use various different names per variable, but scoping allows you to let DaZeus do the work for you.</p>
 <p>There are four scopes, in order of specificity: Global scope, network scope, receiver scope and sender scope. When returning the variable, the `closest' variable is returned. For example, if a variable is set on global scope, and overridden on a network scope, variable requests with the same network will return the network scope value; all other requests will return the global scope value.</p>
 <p>Scope is given through the <code>scope</code> array field on <code>property</code> requests. Some examples follow: </p>
 <div class="fragment"><pre class="fragment">&gt; {<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;property&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;set&quot;</span>,<span class="stringliteral">&quot;examples.scope.foo&quot;</span>, <span class="stringliteral">&quot;bar&quot;</span>]}
@@ -178,7 +178,7 @@ Properties</h2>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Wed Jan 30 2013 08:56:06 for DaZeus by&#160;
+      <li class="footer">Generated on Wed Jan 30 2013 09:05:08 for DaZeus by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
