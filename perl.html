@@ -1,0 +1,145 @@
+<h1 id='name'>NAME</h1>
+
+<p>DaZeus - Perl interface to the DaZeus 2 Socket API</p>
+
+<h1 id='synposis'>SYNPOSIS</h1>
+
+<pre><code>use DaZeus;
+my $dazeus = DaZeus-&gt;connect(&quot;unix:/tmp/dazeus.sock&quot;);
+# or:
+my $dazeus = DaZeus-&gt;connect(&quot;tcp:localhost:1234&quot;);
+
+
+# Get connection status
+my $networks = $dazeus-&gt;networks();
+foreach (@$networks) {
+  my $channels = $dazeus-&gt;channels($n);
+  print &quot;$_:\n&quot;;
+  foreach (@$channels) {
+    print &quot;  $_\n&quot;;
+  }
+}
+
+
+$dazeus-&gt;subscribe(&quot;JOINED&quot;, sub { warn &quot;JOINED event received!&quot; });
+
+
+$dazeus-&gt;subscribe(qw/PRIVMSG NOTICE/);
+while(my $event = $dazeus-&gt;handleEvent()) {
+  next if($event-&gt;{&#39;event&#39;} eq &quot;JOINED&quot;);
+  my ($network, $sender, $channel, $message)
+    = @{$event-&gt;{&#39;params&#39;}};
+  print &quot;[$network $channel] &lt;$sender&gt; $message\n&quot;;
+  my $destination = $channel eq &quot;msg&quot; ? $sender : $channel;
+  $dazeus-&gt;message($network, $destination, $message);
+}</code></pre>
+
+<h1 id='description'>DESCRIPTION</h1>
+
+<p>This module provides a Perl interface to the DaZeus 2 Socket API, so a Perl application can act as a DaZeus 2 plugin. The module supports receiving events and sending messages. See also the &#8220;examples&#8221; directory that comes with the Perl bindings.</p>
+
+<h1 id='methods'>METHODS</h1>
+
+<h2 id='connectsocket'>connect($socket)</h2>
+
+<p>Creates a DaZeus object connected to the given socket. Returns the object if the initial connection succeeded; otherwise, calls die(). If, after this initial connection, the connection fails, for example because the bot is restarted, the module will re-connect.</p>
+
+<p>The given socket name must either start with &#8220;tcp:&#8221; or &#8220;unix:&#8221;; in the case of a UNIX socket it must contain a path to the UNIX socket, in the case of TCP it may end in a port number. IPv6 addresses must have a port number attached, so it can be distinguished from the rest of the address; in &#8220;tcp:2001:db8::1:1234&#8221; 1234 is the port number.</p>
+
+<p>If you give an object through $socket, the module will attempt to use it directly as the target socket.</p>
+
+<h2 id='socket'>socket()</h2>
+
+<p>Returns the internal UNIX or TCP socket used for communication. This call is useful if you want to watch multiple sockets, for example, using the select() call. Every time the socket can be read, you can call the handleEvents() method to process any incoming events. Do not call read() or write() on this socket, or other calls that change internal socket state.</p>
+
+<p>If the given DaZeus object was not connected, a new connection is opened and a valid socket will still be returned.</p>
+
+<h2 id='networks'>networks()</h2>
+
+<p>Returns a list of active networks on this DaZeus instance, or calls die() if communication failed.</p>
+
+<h2 id='channelsnetwork'>channels($network)</h2>
+
+<p>Returns a list of joined channels on the given network, or calls die() if communication failed.</p>
+
+<h2 id='messagenetwork_channel_message'>message($network, $channel, $message)</h2>
+
+<p>Sends given message to given channel on given network, or calls die() if communication failed.</p>
+
+<h2 id='actionnetwork_channel_message'>action($network, $channel, $message)</h2>
+
+<p>Like message(), but sends the message as a CTCP ACTION (as if &#8220;/me&#8221; was used).</p>
+
+<h2 id='sendnamesnetwork_channel'>sendNames($network, $channel)</h2>
+
+<p>Requests a NAMES command being sent for the given channel on the given network. After this, a NAMES event will be produced using the normal event system described below, if the IRC server behaves correctly. Calls die() if communication failed.</p>
+
+<h2 id='sendwhoisnetwork_nick'>sendWhois($network, $nick)</h2>
+
+<p>Requests a WHOIS command being sent for the given nick on the given network. After this, a WHOIS event will be produced using the normal event system described below, if the IRC server behaves correctly. Calls die() if communication failed.</p>
+
+<h2 id='joinnetwork_channel'>join($network, $channel)</h2>
+
+<p>Requests a JOIN command being sent for the given channel on the given network. After this, a JOIN event will be produced using the normal event system described below, if the IRC server behaves correctly and the channel was not already joined. Calls die() if communication failed.</p>
+
+<h2 id='partnetwork_channel'>part($network, $channel)</h2>
+
+<p>Requests a PART command being sent for the given channel on the given network. After this, a PART event will be produced using the normal event system described below, if the IRC server behaves correctly and the channel was joined. Calls die() if communication failed.</p>
+
+<h2 id='getnicknetwork'>getNick($network)</h2>
+
+<p>Requests the current nickname on given network, and returns it. Calls die() if communication failed.</p>
+
+<h2 id='getconfigname'>getConfig($name)</h2>
+
+<p>Retrieves the given variable from the configuration file and returns its value. Calls die() if communication failed.</p>
+
+<h2 id='getpropertyname_network_receiver_sender'>getProperty($name, [$network, [$receiver, [$sender]]])</h2>
+
+<p>Retrieves the given variable from the persistent database and returns its value. Optionally, context can be given for this property request, so properties stored earlier using a specific scope can be correctly matched against this request, and the most specific match will be returned. Calls die() if communication failed.</p>
+
+<h2 id='setpropertyname_value_network_receiver_sender'>setProperty($name, $value, [$network, [$receiver, [$sender]]])</h2>
+
+<p>Stores the given variable to the persistent database. Optionally, context can be given for this property, so multiple properties with the same name and possibly overlapping context can be stored and later returned. This is useful in situations where you want different settings per network, but also overriding settings per channel. Calls die() if communication failed.</p>
+
+<h2 id='unsetpropertyname_network_receiver_sender'>unsetProperty($name, [$network, [$receiver, [$sender]]])</h2>
+
+<p>Unsets the given variable with given context from the persistent database. If no variable was found with the exact given context, no variables are removed. Calls die() if communication failed.</p>
+
+<h2 id='getpropertykeysname_network_receiver_sender'>getPropertyKeys($name, [$network, [$receiver, [$sender]]])</h2>
+
+<p>Retrieves all keys in a given namespace. I.e. if example.foo and example.bar were stored earlier, and getPropertyKeys(&#8220;example&#8221;) is called, &#8220;foo&#8221; and &#8220;bar&#8221; will be returned from this method. Calls die() if communication failed.</p>
+
+<h2 id='subscribeevent_event_event__coderef'>subscribe($event, [$event, [$event, &#8230;, [$coderef]]])</h2>
+
+<p>Subscribes to the given events. If the last parameter is a code reference, it will be called automatically every time one of the given events hits, with the DaZeus object as the first parameter, and the received event as the second.</p>
+
+<h2 id='unsubscribeevent_event_event_'>unsubscribe($event, [$event, [$event, &#8230;]])</h2>
+
+<p>Unsubscribe from the given events. They will no longer be received, until subscribe() is called again.</p>
+
+<h2 id='handleeventtimeout'>handleEvent($timeout)</h2>
+
+<p>Returns all events that can be returned as soon as possible, but no longer than the given $timeout. If $timeout is zero, do not block. If timeout is undefined, wait forever until the first event arrives.</p>
+
+<p>&#8220;As soon as possible&#8221; means that if there are cached events already read from the socket earlier, the socket will not be touched. Otherwise, if events are available for reading, they will be immediately read. Only if no events were cached, none were available for reading, and $timeout is not zero will this function block to retrieve events. (See also handleEvents().)</p>
+
+<p>This method only returns a single event, in order of receiving. For every returned event, the event handler (if given to subscribe()), is called.</p>
+
+<h2 id='handleevents'>handleEvents()</h2>
+
+<p>Handle and return as much events as possible without blocking. Also calls the event handler for every returned event.</p>
+
+<h1 id='author'>AUTHOR</h1>
+
+<p>Sjors Gielen, <a href='mailto:dazeus@sjorsgielen.nl'>&#100;&#097;&#122;&#101;&#117;&#115;&#064;&#115;&#106;&#111;&#114;&#115;&#103;&#105;&#101;&#108;&#101;&#110;&#046;&#110;&#108;</a></p>
+
+<h1 id='copyright_and_license'>COPYRIGHT AND LICENSE</h1>
+
+<p>Copyright (C) 2012 by Sjors Gielen All rights reserved.</p>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+<p>1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
+
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &#8220;AS IS&#8221; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
