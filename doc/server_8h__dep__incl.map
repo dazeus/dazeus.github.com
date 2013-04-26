@@ -1,6 +1,6 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$network_8cpp.html" title="contrib/libdazeus&#45;irc/src/network.cpp" alt="" coords="5,83,243,111"/>
-<area shape="rect" id="node5" href="$server_8cpp.html" title="contrib/libdazeus&#45;irc/src/server.cpp" alt="" coords="267,83,493,111"/>
-<area shape="rect" id="node7" href="$config_8cpp.html" title="src/config.cpp" alt="" coords="517,83,621,111"/>
-<area shape="rect" id="node9" href="$plugincomm_8cpp.html" title="src/plugincomm.cpp" alt="" coords="645,83,784,111"/>
+<map id="contrib/libdazeus&#45;irc/src/server.h" name="contrib/libdazeus&#45;irc/src/server.h">
+<area shape="rect" id="node3" href="$network_8cpp.html" title="contrib/libdazeus&#45;irc\l/src/network.cpp" alt="" coords="5,99,144,143"/>
+<area shape="rect" id="node5" href="$server_8cpp.html" title="contrib/libdazeus&#45;irc\l/src/server.cpp" alt="" coords="168,99,307,143"/>
+<area shape="rect" id="node7" href="$config_8cpp.html" title="src/config.cpp" alt="" coords="331,107,435,135"/>
+<area shape="rect" id="node9" href="$plugincomm_8cpp.html" title="src/plugincomm.cpp" alt="" coords="459,107,597,135"/>
 </map>

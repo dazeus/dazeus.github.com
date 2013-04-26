@@ -1,8 +1,8 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$structdazeus_1_1_socket_config.html" title="dazeus::SocketConfig" alt="" coords="271,5,420,33"/>
-<area shape="rect" id="node4" href="$structdazeus_1_1_database_config.html" title="dazeus::DatabaseConfig" alt="" coords="261,55,429,83"/>
-<area shape="rect" id="node6" href="$structdazeus_1_1_server_config.html" title="dazeus::ServerConfig" alt="" coords="271,170,420,198"/>
+<map id="dazeus::ConfigReaderState" name="dazeus::ConfigReaderState">
+<area shape="rect" id="node2" href="$structdazeus_1_1_socket_config.html" title="dazeus::SocketConfig" alt="" coords="273,5,423,33"/>
+<area shape="rect" id="node4" href="$structdazeus_1_1_database_config.html" title="dazeus::DatabaseConfig" alt="" coords="264,55,432,83"/>
+<area shape="rect" id="node6" href="$structdazeus_1_1_server_config.html" title="dazeus::ServerConfig" alt="" coords="273,170,423,198"/>
 <area shape="rect" id="node8" href="$structdazeus_1_1_network_config.html" title="dazeus::NetworkConfig" alt="" coords="7,133,164,161"/>
-<area shape="rect" id="node10" href="$structdazeus_1_1_global_config.html" title="dazeus::GlobalConfig" alt="" coords="271,221,420,249"/>
-<area shape="rect" id="node12" href="$structdazeus_1_1_plugin_config.html" title="dazeus::PluginConfig" alt="" coords="272,271,419,299"/>
+<area shape="rect" id="node10" href="$structdazeus_1_1_global_config.html" title="dazeus::GlobalConfig" alt="" coords="273,221,423,249"/>
+<area shape="rect" id="node12" href="$structdazeus_1_1_plugin_config.html" title="dazeus::PluginConfig" alt="" coords="275,271,421,299"/>
 </map>

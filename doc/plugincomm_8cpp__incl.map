@@ -1,8 +1,9 @@
-<map id="G" name="G">
-<area shape="rect" id="node45" href="$plugincomm_8h.html" title="plugincomm.h" alt="" coords="1056,83,1160,111"/>
-<area shape="rect" id="node56" href="$utils_8h.html" title="utils.h" alt="" coords="824,161,880,189"/>
-<area shape="rect" id="node67" href="$network_8h.html" title="network.h" alt="" coords="672,161,750,189"/>
-<area shape="rect" id="node74" href="$config_8h.html" title="config.h" alt="" coords="134,83,200,111"/>
-<area shape="rect" id="node77" href="$database_8h.html" title="database.h" alt="" coords="176,161,262,189"/>
-<area shape="rect" id="node86" href="$server_8h.html" title="server.h" alt="" coords="462,83,531,111"/>
+<map id="src/plugincomm.cpp" name="src/plugincomm.cpp">
+<area shape="rect" id="node45" href="$plugincomm_8h.html" title="plugincomm.h" alt="" coords="967,83,1071,111"/>
+<area shape="rect" id="node56" href="$utils_8h.html" title="utils.h" alt="" coords="1417,161,1473,189"/>
+<area shape="rect" id="node65" href="$network_8h.html" title="network.h" alt="" coords="1548,161,1625,189"/>
+<area shape="rect" id="node72" href="$config_8h.html" title="config.h" alt="" coords="1711,83,1777,111"/>
+<area shape="rect" id="node75" href="$database_8h.html" title="database.h" alt="" coords="2001,161,2087,189"/>
+<area shape="rect" id="node86" href="$server_8h.html" title="server.h" alt="" coords="2089,83,2159,111"/>
+<area shape="rect" id="node96" href="$dazeus_8h.html" title="dazeus.h" alt="" coords="1852,161,1927,189"/>
 </map>

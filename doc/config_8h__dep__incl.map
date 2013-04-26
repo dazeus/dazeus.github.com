@@ -1,6 +1,7 @@
-<map id="G" name="G">
+<map id="src/config.h" name="src/config.h">
 <area shape="rect" id="node3" href="$config_8cpp.html" title="src/config.cpp" alt="" coords="5,83,109,111"/>
 <area shape="rect" id="node5" href="$database_8cpp.html" title="src/database.cpp" alt="" coords="133,83,256,111"/>
-<area shape="rect" id="node7" href="$src_2dazeus_8cpp.html" title="src/dazeus.cpp" alt="" coords="280,83,389,111"/>
+<area shape="rect" id="node7" href="$dazeus_8cpp.html" title="src/dazeus.cpp" alt="" coords="280,83,389,111"/>
 <area shape="rect" id="node9" href="$plugincomm_8cpp.html" title="src/plugincomm.cpp" alt="" coords="413,83,552,111"/>
+<area shape="rect" id="node11" href="$pluginmonitor_8cpp.html" title="src/pluginmonitor.cpp" alt="" coords="576,83,723,111"/>
 </map>

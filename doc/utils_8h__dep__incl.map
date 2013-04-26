@@ -1,9 +1,10 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$network_8cpp.html" title="contrib/libdazeus&#45;irc/src/network.cpp" alt="" coords="5,83,243,111"/>
-<area shape="rect" id="node5" href="$utils_8cpp.html" title="contrib/libdazeus&#45;irc/src/utils.cpp" alt="" coords="267,83,480,111"/>
-<area shape="rect" id="node7" href="$config_8cpp.html" title="src/config.cpp" alt="" coords="504,83,608,111"/>
-<area shape="rect" id="node9" href="$database_8cpp.html" title="src/database.cpp" alt="" coords="632,83,755,111"/>
-<area shape="rect" id="node11" href="$plugincomm_8h.html" title="src/plugincomm.h" alt="" coords="779,83,904,111"/>
-<area shape="rect" id="node15" href="$plugincomm_8cpp.html" title="src/plugincomm.cpp" alt="" coords="872,161,1011,189"/>
-<area shape="rect" id="node13" href="$src_2dazeus_8cpp.html" title="src/dazeus.cpp" alt="" coords="739,161,848,189"/>
+<map id="contrib/libdazeus&#45;irc/src/utils.h" name="contrib/libdazeus&#45;irc/src/utils.h">
+<area shape="rect" id="node3" href="$network_8cpp.html" title="contrib/libdazeus&#45;irc\l/src/network.cpp" alt="" coords="5,99,144,143"/>
+<area shape="rect" id="node5" href="$utils_8cpp.html" title="contrib/libdazeus&#45;irc\l/src/utils.cpp" alt="" coords="168,99,307,143"/>
+<area shape="rect" id="node7" href="$config_8cpp.html" title="src/config.cpp" alt="" coords="331,107,435,135"/>
+<area shape="rect" id="node9" href="$database_8cpp.html" title="src/database.cpp" alt="" coords="459,107,581,135"/>
+<area shape="rect" id="node11" href="$plugincomm_8h.html" title="src/plugincomm.h" alt="" coords="605,107,731,135"/>
+<area shape="rect" id="node15" href="$plugincomm_8cpp.html" title="src/plugincomm.cpp" alt="" coords="699,193,837,221"/>
+<area shape="rect" id="node18" href="$pluginmonitor_8cpp.html" title="src/pluginmonitor.cpp" alt="" coords="805,107,952,135"/>
+<area shape="rect" id="node13" href="$dazeus_8cpp.html" title="src/dazeus.cpp" alt="" coords="565,193,675,221"/>
 </map>
