@@ -148,6 +148,9 @@ Requests</h1>
 </div><!-- fragment --><p>The "subscribe to events" request will look like: </p>
 <div class="fragment"><div class="line">{<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;subscribe&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;JOINED&quot;</span>,<span class="stringliteral">&quot;MOTD&quot;</span>]}</div>
 </div><!-- fragment --><p> To unsubscribe, change <code>subscribe</code> into <code>unsubscribe</code>. See the next section for more information.</p>
+<p>To subscribe to commands: </p>
+<div class="fragment"><div class="line">{<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;command&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;helloworld&quot;</span>]}</div>
+</div><!-- fragment --><p> There are several optional parameters, too. See the Commands section for more information.</p>
 <p>For all database actions, the action keyword is <code>property</code>, and the specific action is in the first parameter. For example, to retrieve the <code>count</code> property, the <code>counter</code> example Perl script sends: </p>
 <div class="fragment"><div class="line">{<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;property&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;get&quot;</span>,<span class="stringliteral">&quot;examples.counter.count&quot;</span>]}</div>
 </div><!-- fragment --><p> To set the value: </p>
@@ -160,6 +163,17 @@ Events</h1>
 <div class="line">PRIVMSG, NOTICE, CTCP, CTCP_REP, ACTION, NUMERIC, UNKNOWN, WHOIS, NAMES,</div>
 <div class="line">PRIVMSG_ME, CTCP_ME, ACTION_ME, PONG</div>
 </div><!-- fragment --><p>All events will have have an <code>event</code> field set to one of the above strings, and a <code>params</code> field that will contain an array with parameters depending on the event.</p>
+<h2><a class="anchor" id="Commands"></a>
+Commands</h2>
+<p>Plugins can subscribe to commands, so that DaZeus can do the decoding, identification and authorization for them. Of those three goals, two are currently implemented &ndash; authorization is a work-in-progress.</p>
+<p>To register a 'helloworld' command, send: </p>
+<div class="fragment"><div class="line">{<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;command&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;helloworld&quot;</span>]}</div>
+<div class="line">{<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;command&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;helloworld&quot;</span>, <span class="stringliteral">&quot;networkname&quot;</span>]}</div>
+<div class="line">{<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;command&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;helloworld&quot;</span>, <span class="stringliteral">&quot;networkname&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;sender&quot;</span>]}</div>
+<div class="line">{<span class="stringliteral">&quot;do&quot;</span>:<span class="stringliteral">&quot;command&quot;</span>, <span class="stringliteral">&quot;params&quot;</span>:[<span class="stringliteral">&quot;helloworld&quot;</span>, <span class="stringliteral">&quot;networkname&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;receiver&quot;</span>]}</div>
+</div><!-- fragment --><p> This will cause the DaZeus core, when it receives such a command (which, depending on core configuration, could be by messaging "helloworld" to it or saying something like "!helloworld" or "DaZeus: helloworld" in a channel), to send COMMAND events to the plugin like: </p>
+<div class="fragment"><div class="line">{<span class="stringliteral">&#39;event&#39;</span>:<span class="stringliteral">&#39;COMMAND&#39;</span>, <span class="stringliteral">&#39;params&#39;</span>:[<span class="stringliteral">&#39;network&#39;</span>, <span class="stringliteral">&#39;sender&#39;</span>, <span class="stringliteral">&#39;channel&#39;</span>, <span class="stringliteral">&#39;command&#39;</span>, <span class="stringliteral">&#39;arguments&#39;</span>, <span class="stringliteral">&#39;arg1&#39;</span>, <span class="stringliteral">&#39;arg2&#39;</span> ...]}</div>
+</div><!-- fragment --><p>When a sender filter is given, the core will only forward commands to plugins if the sender is identified to services. If this is unknown at the time the command is received, the core will only forward the command after a WHOIS confirms the user is identified. This is done automatically by the core, but you may need to be aware that this can cause these commands to come in in a different order than they were received from the network.</p>
 <h1><a class="anchor" id="Properties"></a>
 Properties</h1>
 <p>Properties can be sent and retrieved over the DaZeus 2 plugin protocol and act as a database for zero-configuration plugins. Using the <code>property set</code> command a property can be stored: </p>
@@ -203,7 +217,7 @@ Properties</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 27 2013 01:03:34 for DaZeus by
+    <li class="footer">Generated on Sat Nov 9 2013 02:59:19 for DaZeus by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

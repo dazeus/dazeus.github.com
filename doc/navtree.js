@@ -5,7 +5,9 @@ var NAVTREE =
       [ "Introduction", "pluginprotocoldocs.html#Introduction", null ],
       [ "Overview", "pluginprotocoldocs.html#Overview", null ],
       [ "Requests", "pluginprotocoldocs.html#Requests", null ],
-      [ "Events", "pluginprotocoldocs.html#Events", null ],
+      [ "Events", "pluginprotocoldocs.html#Events", [
+        [ "Commands", "pluginprotocoldocs.html#Commands", null ]
+      ] ],
       [ "Properties", "pluginprotocoldocs.html#Properties", null ]
     ] ],
     [ "Namespaces", null, [
@@ -41,7 +43,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7"
+"structdazeus_1_1_database_config.html#a4c797574622bf2a729f75226b044e941"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

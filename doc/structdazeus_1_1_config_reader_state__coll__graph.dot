@@ -1,0 +1,20 @@
+digraph "dazeus::ConfigReaderState"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="dazeus::ConfigReaderState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" socket_progress" ,fontname="Helvetica"];
+  Node2 [label="dazeus::SocketConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdazeus_1_1_socket_config.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" database_progress" ,fontname="Helvetica"];
+  Node3 [label="dazeus::DatabaseConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdazeus_1_1_database_config.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_progress" ,fontname="Helvetica"];
+  Node4 [label="dazeus::ServerConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdazeus_1_1_server_config.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" network" ,fontname="Helvetica"];
+  Node5 [label="dazeus::NetworkConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdazeus_1_1_network_config.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" global_progress" ,fontname="Helvetica"];
+  Node6 [label="dazeus::GlobalConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdazeus_1_1_global_config.html"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" plugin_progress" ,fontname="Helvetica"];
+  Node7 [label="dazeus::PluginConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdazeus_1_1_plugin_config.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" network_progress" ,fontname="Helvetica"];
+}

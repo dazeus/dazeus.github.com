@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"structdazeus_1_1_database_config.html#a4c797574622bf2a729f75226b044e941":[2,0,0,11,0],
 "structdazeus_1_1_database_config.html#a568a5ffcd858c04eec491a1363254fb7":[2,0,0,11,3],
 "structdazeus_1_1_database_config.html#a5e4135ca8b8578ef861791d1a9494b04":[2,0,0,11,4],
 "structdazeus_1_1_database_config.html#a5eff2a6128c80e9bfc1dd4a779f5be1d":[2,0,0,11,7],

@@ -1,0 +1,9 @@
+digraph "contrib/libdazeus-irc/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_35de506eec0f5065112d75b60fde86df {
+    graph [ bgcolor="#ddddee", pencolor="black", label="libdazeus-irc" fontname="Helvetica", fontsize="10", URL="dir_35de506eec0f5065112d75b60fde86df.html"]
+  dir_ead9fea52ed6716b9a9799359b38e7a3 [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ead9fea52ed6716b9a9799359b38e7a3.html"];
+  }
+}

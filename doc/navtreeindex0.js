@@ -186,8 +186,8 @@ var NAVTREEINDEX0 =
 "main_8cpp.html#a4085d4a11a46d3c6d2bdda2579125987":[3,0,1,7,1],
 "main_8cpp.html#af2cb254df75f4b45ca0b0893f9f01979":[3,0,1,7,2],
 "main_8cpp_source.html":[3,0,1,7],
-"namespacedazeus.html":[1,0,0],
 "namespacedazeus.html":[2,0,0],
+"namespacedazeus.html":[1,0,0],
 "namespaces.html":[1,0],
 "network_8cpp.html":[3,0,0,0,0,0],
 "network_8cpp.html#aa577c474a0d4b6d46c942f7c4a46aa47":[3,0,0,0,0,0,1],
@@ -215,6 +215,7 @@ var NAVTREEINDEX0 =
 "pluginmonitor_8h.html":[3,0,1,11],
 "pluginmonitor_8h_source.html":[3,0,1,11],
 "pluginprotocoldocs.html":[0],
+"pluginprotocoldocs.html#Commands":[0,3,0],
 "pluginprotocoldocs.html#Events":[0,3],
 "pluginprotocoldocs.html#Introduction":[0,0],
 "pluginprotocoldocs.html#Overview":[0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "structdazeus_1_1_database_config.html#a1e608fcca986f4fbe8f6c369dbc406ac":[2,0,0,11,1],
 "structdazeus_1_1_database_config.html#a2b2821e42b883b96c9134c8a716143d9":[2,0,0,11,2],
 "structdazeus_1_1_database_config.html#a3c2e40b1ec0c51bee64a8ec4de7854c2":[2,0,0,11,5],
-"structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d":[2,0,0,11,6],
-"structdazeus_1_1_database_config.html#a4c797574622bf2a729f75226b044e941":[2,0,0,11,0]
+"structdazeus_1_1_database_config.html#a3cca09856e72d2cb47828130b479694d":[2,0,0,11,6]
 };
